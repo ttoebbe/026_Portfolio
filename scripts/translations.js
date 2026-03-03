@@ -36,13 +36,13 @@ window.PORTFOLIO_I18N = {
     "projects.title": "My Projects",
     "projects.join.imageAlt": "Screenshot of Join project",
     "projects.join.desc":
-      "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "Task-Manager nach dem Kanban-Prinzip. Erstelle und organisiere Aufgaben per Drag-and-drop und weise Benutzer sowie Kategorien zu.",
     "projects.pokedex.imageAlt": "Screenshot of Pokedex project",
     "projects.pokedex.desc":
-      "Interactive Pokedex app using PokeAPI. Browse, search and inspect detailed Pokemon data with a clean and responsive interface.",
+      "Interaktive Pokedex-App mit der PokeAPI. Durchsuche, filtere und analysiere detaillierte Pokemon-Daten in einer klaren und responsiven Oberfläche.",
     "projects.pollo.imageAlt": "Screenshot of Pollo Loco project",
     "projects.pollo.desc":
-      "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "Jump-and-Run-Spiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe, Münzen und Tabasco-Salsa zu sammeln, um gegen das verrückte Huhn zu kämpfen.",
     "projects.github": "GitHub",
     "projects.live": "Live Test",
 
