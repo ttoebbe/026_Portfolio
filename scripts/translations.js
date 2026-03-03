@@ -82,7 +82,29 @@ window.PORTFOLIO_I18N = {
     "form.status.success": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
     "form.status.error": "Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.",
 
-    "footer.copy": "Copyright {{year}} Thomas Többe-Hömke"
+    "footer.copy": "Copyright {{year}} Thomas Többe-Hömke",
+    "footer.tagline": "digitalization & smart production",
+    "footer.legal": "Impressum",
+    "footer.privacy": "Datenschutz",
+
+    "legal.backLink": "← Zurück zum Portfolio",
+    "legal.imprint.title": "Impressum",
+    "legal.imprint.tmg": "Angaben gemaß Paragraph 5 TMG",
+    "legal.imprint.contact": "Kontakt",
+    "legal.imprint.responsible": "Verantwortlich fuer den Inhalt",
+    "legal.imprint.liability": "Haftungshinweis",
+    "legal.imprint.liabilityText": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.",
+    
+    "privacy.title": "Datenschutzerklärung",
+    "privacy.general.title": "Allgemeine Hinweise",
+    "privacy.general.text": "Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.",
+    "privacy.responsible.title": "Verantwortliche Stelle",
+    "privacy.datacollection.title": "Datenerfassung auf dieser Website",
+    "privacy.datacollection.text": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.",
+    "privacy.contactform.title": "Kontaktformular",
+    "privacy.contactform.text": "Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert.",
+    "privacy.rights.title": "Ihre Rechte",
+    "privacy.rights.text": "Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen."
   },
 
   en: {
@@ -163,6 +185,28 @@ window.PORTFOLIO_I18N = {
     "form.status.success": "Thank you! Your message was sent successfully.",
     "form.status.error": "Sending failed. Please try again later.",
 
-    "footer.copy": "Copyright {{year}} Thomas Többe-Hömke"
+    "footer.copy": "Copyright {{year}} Thomas Többe-Hömke",
+    "footer.tagline": "digitalization & smart production",
+    "footer.legal": "Legal notice",
+    "footer.privacy": "Privacy policy",
+
+    "legal.backLink": "← Back to Portfolio",
+    "legal.imprint.title": "Legal Notice",
+    "legal.imprint.tmg": "Information according to Paragraph 5 TMG",
+    "legal.imprint.contact": "Contact",
+    "legal.imprint.responsible": "Responsible for content",
+    "legal.imprint.liability": "Liability disclaimer",
+    "legal.imprint.liabilityText": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
+    
+    "privacy.title": "Privacy Policy",
+    "privacy.general.title": "General Information",
+    "privacy.general.text": "The protection of your personal data is important to me. This privacy policy informs you about the nature, scope and purpose of processing personal data on this website.",
+    "privacy.responsible.title": "Responsible Party",
+    "privacy.datacollection.title": "Data Collection on this Website",
+    "privacy.datacollection.text": "Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.",
+    "privacy.contactform.title": "Contact Form",
+    "privacy.contactform.text": "If you send me inquiries via contact form, your details from the inquiry form including the contact data you provided there will be stored by me for the purpose of processing the inquiry and in case of follow-up questions.",
+    "privacy.rights.title": "Your Rights",
+    "privacy.rights.text": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request correction, blocking or deletion of this data."
   }
 };
