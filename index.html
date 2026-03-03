@@ -25,36 +25,50 @@
           <span class="logo-mark">&lt;TT&gt;</span>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#profile" data-translation="nav.why">Profil</a>
-          <a href="#skills" data-translation="nav.skills">Kompetenzen</a>
-          <a href="#projects" data-translation="nav.projects">Erfahrung</a>
-          <a href="#contact" data-translation="nav.contact">Kontakt</a>
-        </nav>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
 
-        <div class="lang-switch" aria-label="Language switch">
-          <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
-          <span aria-hidden="true">|</span>
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <div class="header-panel" id="mobile-nav-panel">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#profile" data-translation="nav.why">Profil</a>
+            <a href="#skills" data-translation="nav.skills">Kompetenzen</a>
+            <a href="#projects" data-translation="nav.projects">Erfahrung</a>
+            <a href="#contact" data-translation="nav.contact">Kontakt</a>
+          </nav>
+
+          <div class="lang-switch" aria-label="Language switch">
+            <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
         </div>
       </div>
     </header>
 
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
+
     <main id="main-content">
       <section class="section hero reveal">
         <div class="container hero-grid">
-          <p class="availability" data-translation="hero.available">Open to work</p>
+          <a class="contact-rail" href="#contact" data-translation="hero.available">Open to work</a>
 
           <div class="hero-copy">
             <p class="kicker" data-translation="hero.role">Frontend Developer</p>
             <h1 data-translation="hero.name">Marcus Schmidt</h1>
+          </div>
+
+          <div class="hero-scroll">
+            <img class="scroll-icon" src="assets/img/icons/scroll-down.svg" alt="" aria-hidden="true" />
             <p class="scroll-hint" data-translation="hero.scrollHint">Scroll to discover</p>
           </div>
 
           <div class="hero-image-frame">
             <img
-              src="assets/img/TT/thomasToebbe.png"
-              alt="Portrait of Marcus Schmidt"
+              src="assets/img/TT/Thomas2.png"
+              alt="Portrait of Thomas Toebbe-Hoemke"
               data-translation="hero.imageAlt"
               data-translation-attr="alt"
             />
@@ -66,8 +80,8 @@
         <div class="container why-grid">
           <div class="why-image-frame">
             <img
-              src="assets/img/TT/thomasToebbe.png"
-              alt="Marcus outdoors"
+              src="assets/img/TT/Thomas3.png"
+              alt="Thomas outdoors"
               data-translation="why.imageAlt"
               data-translation-attr="alt"
             />
@@ -81,23 +95,32 @@
             </p>
 
             <ul class="why-list">
-              <li>
-                <h3 data-translation="why.item1.title">Located in Hamburg</h3>
-                <p data-translation="why.item1.body">
-                  Based in Germany and available for local or remote collaboration.
-                </p>
+              <li class="why-item">
+                <img class="why-icon" src="assets/img/icons/house.svg" alt="" aria-hidden="true" />
+                <div>
+                  <h3 data-translation="why.item1.title">Located in Hamburg</h3>
+                  <p data-translation="why.item1.body">
+                    Based in Germany and available for local or remote collaboration.
+                  </p>
+                </div>
               </li>
-              <li>
-                <h3 data-translation="why.item2.title">Remote-friendly</h3>
-                <p data-translation="why.item2.body">
-                  Comfortable with async workflows, reviews, and distributed teamwork.
-                </p>
+              <li class="why-item">
+                <img class="why-icon" src="assets/img/icons/laptop_chromebook.svg" alt="" aria-hidden="true" />
+                <div>
+                  <h3 data-translation="why.item2.title">Remote-friendly</h3>
+                  <p data-translation="why.item2.body">
+                    Comfortable with async workflows, reviews, and distributed teamwork.
+                  </p>
+                </div>
               </li>
-              <li>
-                <h3 data-translation="why.item3.title">Open to relocation</h3>
-                <p data-translation="why.item3.body">
-                  Willing to move for a strong team and impactful product mission.
-                </p>
+              <li class="why-item">
+                <img class="why-icon" src="assets/img/icons/projekt-arrow.svg" alt="" aria-hidden="true" />
+                <div>
+                  <h3 data-translation="why.item3.title">Open to relocation</h3>
+                  <p data-translation="why.item3.body">
+                    Willing to move for a strong team and impactful product mission.
+                  </p>
+                </div>
               </li>
             </ul>
 
