@@ -409,6 +409,17 @@ p {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
+.skill-card-highlight {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.challenge-image {
+  width: min(100%, 240px);
+  height: auto;
+  object-fit: contain;
+}
+
 .projects .container {
   display: grid;
   gap: var(--space-4);
@@ -943,6 +954,14 @@ textarea:focus-visible {
     width: 50px;
     height: 50px;
     padding: 10px;
+  }
+
+  .skill-card-highlight {
+    grid-column: span 3;
+  }
+
+  .challenge-image {
+    width: min(100%, 280px);
   }
 
   .project-actions {
