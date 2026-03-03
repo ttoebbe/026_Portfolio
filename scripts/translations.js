@@ -1,7 +1,7 @@
 ﻿/**
  * @file Translation dictionaries for the portfolio website.
  */
-window.PORTFOLIO_I18N = {
+window.PORTFOLIO_TRANSLATIONS = {
   de: {
     "nav.why": "Profil",
     "nav.skills": "Kompetenzen",

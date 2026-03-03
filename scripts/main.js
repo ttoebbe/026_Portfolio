@@ -3,7 +3,7 @@
 const DEFAULT_LANGUAGE = "de";
 const LANGUAGE_STORAGE_KEY = "portfolio_lang";
 const SUPPORTED_LANGUAGES = ["de", "en"];
-const i18nTables = window.PORTFOLIO_I18N || {};
+const translationTables = window.PORTFOLIO_TRANSLATIONS || {};
 const portfolioConfig = window.PORTFOLIO_CONFIG || {};
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -28,19 +28,19 @@ function getInitialLanguage() {
  * Returns translated value for a key.
  */
 function getTranslation(key) {
-  const currentTable = i18nTables[currentLanguage] || {};
-  const fallbackTable = i18nTables[DEFAULT_LANGUAGE] || {};
+  const currentTable = translationTables[currentLanguage] || {};
+  const fallbackTable = translationTables[DEFAULT_LANGUAGE] || {};
   const translated = currentTable[key] || fallbackTable[key];
   const textValue = typeof translated === "string" ? translated : key;
   return textValue.replace("{{year}}", String(new Date().getFullYear()));
 }
 
 /**
- * Applies all i18n texts and button states.
+ * Applies all translation texts and button states.
  */
 function applyTranslations() {
   document.documentElement.lang = currentLanguage;
-  document.querySelectorAll("[data-i18n]").forEach(applyTranslationToElement);
+  document.querySelectorAll("[data-translation]").forEach(applyTranslationToElement);
   document.querySelectorAll(".lang-btn").forEach(setLanguageButtonState);
 }
 
@@ -48,9 +48,9 @@ function applyTranslations() {
  * Applies translation to one element.
  */
 function applyTranslationToElement(element) {
-  const key = element.getAttribute("data-i18n");
+  const key = element.getAttribute("data-translation");
   const translatedText = getTranslation(key);
-  const attributes = element.getAttribute("data-i18n-attr");
+  const attributes = element.getAttribute("data-translation-attr");
   if (!attributes) {
     element.textContent = translatedText;
     return;
