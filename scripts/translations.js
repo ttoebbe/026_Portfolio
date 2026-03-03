@@ -20,10 +20,12 @@ window.PORTFOLIO_I18N = {
     "why.item1.title": "Standort Osnabrück/Emsland",
     "why.item1.body":
       "Regional in Merzen verankert, bei hohem Remoteanteil auch für weiter entfernte Standorte verfügbar.",
-    "why.item2.title": "70% Technik, 30% Führung",
-    "why.item2.body": "Optimale Balance zwischen technischer Expertise und koordinierender Verantwortung.",
+    "why.item2.title": "Technik & Führung",
+    "why.item2.body":
+      "Optimale Balance zwischen technischer Expertise und koordinierender Verantwortung.",
     "why.item3.title": "20+ Jahre Industrieerfahrung",
-    "why.item3.body": "Umfassende Expertise in Automatisierung, OT/IT-Integration und Projektmanagement.",
+    "why.item3.body":
+      "Umfassende Expertise in Automatisierung, OT/IT-Integration und Projektmanagement.",
     "why.imageAlt": "Thomas im industriellen Umfeld",
 
     "cta.talk": "Lassen Sie uns sprechen",
@@ -93,18 +95,23 @@ window.PORTFOLIO_I18N = {
     "legal.imprint.contact": "Kontakt",
     "legal.imprint.responsible": "Verantwortlich fuer den Inhalt",
     "legal.imprint.liability": "Haftungshinweis",
-    "legal.imprint.liabilityText": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.",
-    
+    "legal.imprint.liabilityText":
+      "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.",
+
     "privacy.title": "Datenschutzerklärung",
     "privacy.general.title": "Allgemeine Hinweise",
-    "privacy.general.text": "Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.",
+    "privacy.general.text":
+      "Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf dieser Website.",
     "privacy.responsible.title": "Verantwortliche Stelle",
     "privacy.datacollection.title": "Datenerfassung auf dieser Website",
-    "privacy.datacollection.text": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.",
+    "privacy.datacollection.text":
+      "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.",
     "privacy.contactform.title": "Kontaktformular",
-    "privacy.contactform.text": "Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert.",
+    "privacy.contactform.text":
+      "Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert.",
     "privacy.rights.title": "Ihre Rechte",
-    "privacy.rights.text": "Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen."
+    "privacy.rights.text":
+      "Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen."
   },
 
   en: {
@@ -125,10 +132,12 @@ window.PORTFOLIO_I18N = {
     "why.item1.title": "Located Osnabrück/Emsland",
     "why.item1.body":
       "Regionally based in Merzen, available for distant locations with high remote ratio.",
-    "why.item2.title": "70% Technical, 30% Leadership",
-    "why.item2.body": "Optimal balance between technical expertise and coordinating responsibility.",
+    "why.item2.title": "Technology & Leadership",
+    "why.item2.body":
+      "Optimal balance between technical expertise and coordinating responsibility.",
     "why.item3.title": "20+ Years Industrial Experience",
-    "why.item3.body": "Comprehensive expertise in automation, OT/IT integration and project management.",
+    "why.item3.body":
+      "Comprehensive expertise in automation, OT/IT integration and project management.",
     "why.imageAlt": "Thomas in industrial environment",
 
     "cta.talk": "Let's talk",
@@ -196,17 +205,22 @@ window.PORTFOLIO_I18N = {
     "legal.imprint.contact": "Contact",
     "legal.imprint.responsible": "Responsible for content",
     "legal.imprint.liability": "Liability disclaimer",
-    "legal.imprint.liabilityText": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
-    
+    "legal.imprint.liabilityText":
+      "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
+
     "privacy.title": "Privacy Policy",
     "privacy.general.title": "General Information",
-    "privacy.general.text": "The protection of your personal data is important to me. This privacy policy informs you about the nature, scope and purpose of processing personal data on this website.",
+    "privacy.general.text":
+      "The protection of your personal data is important to me. This privacy policy informs you about the nature, scope and purpose of processing personal data on this website.",
     "privacy.responsible.title": "Responsible Party",
     "privacy.datacollection.title": "Data Collection on this Website",
-    "privacy.datacollection.text": "Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.",
+    "privacy.datacollection.text":
+      "Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.",
     "privacy.contactform.title": "Contact Form",
-    "privacy.contactform.text": "If you send me inquiries via contact form, your details from the inquiry form including the contact data you provided there will be stored by me for the purpose of processing the inquiry and in case of follow-up questions.",
+    "privacy.contactform.text":
+      "If you send me inquiries via contact form, your details from the inquiry form including the contact data you provided there will be stored by me for the purpose of processing the inquiry and in case of follow-up questions.",
     "privacy.rights.title": "Your Rights",
-    "privacy.rights.text": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request correction, blocking or deletion of this data."
+    "privacy.rights.text":
+      "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request correction, blocking or deletion of this data."
   }
 };
