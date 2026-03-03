@@ -33,18 +33,18 @@ window.PORTFOLIO_I18N = {
     "skills.title": "Kernkompetenzen",
     "skills.challenge": "Neue Herausforderungen",
 
-    "projects.title": "Berufserfahrung",
-    "projects.join.imageAlt": "TFB Nortrup Logo",
+    "projects.title": "My Projects",
+    "projects.join.imageAlt": "Screenshot of Join project",
     "projects.join.desc":
-      "IT-Leiter und Bereichsleiter Technik mit Verantwortung für werksübergreifende Technik, IT-Infrastruktur und Personalführung von 40-50 Mitarbeitern.",
-    "projects.sharkie.imageAlt": "Industrielle Automatisierung",
-    "projects.sharkie.desc":
-      "Internationale Montage, Inbetriebnahme, SPS-Optimierung und Projektumsetzung im Maschinen- und Anlagenbau.",
-    "projects.pollo.imageAlt": "Smart Production Konzept",
+      "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "projects.pokedex.imageAlt": "Screenshot of Pokedex project",
+    "projects.pokedex.desc":
+      "Interactive Pokedex app using PokeAPI. Browse, search and inspect detailed Pokemon data with a clean and responsive interface.",
+    "projects.pollo.imageAlt": "Screenshot of Pollo Loco project",
     "projects.pollo.desc":
-      "Aktueller Fokus auf Smart Production, Energieeffizienz, Datenerfassung und Integration von Automatisierung mit IT-Systemen.",
-    "projects.github": "LinkedIn",
-    "projects.live": "Details",
+      "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "projects.github": "GitHub",
+    "projects.live": "Live Test",
 
     "testimonials.title": "Sie suchen einen erfahrenen Digitalisierungsexperten?",
     "testimonials.one.name": "Projektpartner Industrie 4.0",
@@ -145,18 +145,18 @@ window.PORTFOLIO_I18N = {
     "skills.title": "Core Competencies",
     "skills.challenge": "New Challenges",
 
-    "projects.title": "Professional Experience",
-    "projects.join.imageAlt": "TFB Nortrup Logo",
+    "projects.title": "My Projects",
+    "projects.join.imageAlt": "Screenshot of Join project",
     "projects.join.desc":
-      "IT Manager and Technical Department Head responsible for cross-plant technology, IT infrastructure and personnel management of 40-50 employees.",
-    "projects.sharkie.imageAlt": "Industrial Automation",
-    "projects.sharkie.desc":
-      "International assembly, commissioning, PLC optimization and project implementation in mechanical and plant engineering.",
-    "projects.pollo.imageAlt": "Smart Production Concept",
+      "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "projects.pokedex.imageAlt": "Screenshot of Pokedex project",
+    "projects.pokedex.desc":
+      "Interactive Pokedex app using PokeAPI. Browse, search and inspect detailed Pokemon data with a clean and responsive interface.",
+    "projects.pollo.imageAlt": "Screenshot of Pollo Loco project",
     "projects.pollo.desc":
-      "Current focus on Smart Production, energy efficiency, data acquisition and integration of automation with IT systems.",
-    "projects.github": "LinkedIn",
-    "projects.live": "Details",
+      "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "projects.github": "GitHub",
+    "projects.live": "Live Test",
 
     "testimonials.title": "Looking for an experienced digitalization expert?",
     "testimonials.one.name": "Industry 4.0 Project Partner",

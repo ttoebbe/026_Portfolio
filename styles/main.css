@@ -422,30 +422,30 @@ p {
 
 .projects .container {
   display: grid;
-  gap: var(--space-4);
-  max-width: 900px;
+  gap: var(--space-5);
+  max-width: 1180px;
   margin-inline: auto;
 }
 
 .project-card {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: var(--space-4);
-  align-items: start;
-  padding: var(--space-3);
-  border: 1px solid var(--line);
+  grid-template-columns: minmax(320px, 1.18fr) minmax(260px, 1fr);
+  gap: var(--space-5);
+  align-items: stretch;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid rgba(0, 255, 255, 0.24);
   border-radius: var(--radius-md);
-  background: rgba(26, 26, 46, 0.6);
+  background: rgba(9, 3, 56, 0.82);
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
-  border-color: var(--primary);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 24px rgba(0, 255, 255, 0.12);
 }
 
 .project-card.reverse {
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.18fr);
 }
 
 .project-card.reverse .project-media {
@@ -459,43 +459,84 @@ p {
 .project-media {
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  align-self: center;
 }
 
 .project-media img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-content h3 {
   color: var(--primary);
-  margin-bottom: 0.25rem;
-  font-size: 1.3rem;
-  font-weight: 600;
+  margin-bottom: var(--space-2);
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1;
 }
 
 .stack {
-  color: var(--accent);
+  color: var(--primary);
   font-family: "Fira Code", monospace;
-  font-size: 0.75rem;
-  margin-bottom: var(--space-2);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+  margin-bottom: var(--space-4);
+  text-transform: none;
+  letter-spacing: 0.03em;
 }
 
 .project-content p {
-  color: var(--text-muted);
-  margin-bottom: var(--space-3);
-  font-size: 0.9rem;
-  line-height: 1.4;
+  color: #77f5f0;
+  margin-bottom: var(--space-4);
+  font-size: 1.55rem;
+  line-height: 1.44;
+  max-width: 34ch;
 }
 
 .project-actions {
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-3);
   flex-wrap: wrap;
+}
+
+.project-actions .btn {
+  min-height: 52px;
+  min-width: 136px;
+  border-radius: 0;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  padding: 0.7rem 1.35rem;
+}
+
+.project-actions .btn-secondary {
+  border-color: var(--primary);
+  color: var(--accent);
+  background: transparent;
+}
+
+.project-actions .btn-secondary:hover {
+  background: rgba(0, 255, 255, 0.12);
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.2);
+}
+
+.project-actions .btn-primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #010824;
+}
+
+.project-actions .btn-primary:hover {
+  background: #22f8f1;
+  border-color: #22f8f1;
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.4);
 }
 
 .testimonial-grid {
@@ -884,6 +925,20 @@ textarea:focus-visible {
     order: initial;
   }
 
+  .project-content h3 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+
+  .stack {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .project-content p {
+    font-size: 1.02rem;
+    max-width: none;
+  }
+
   .testimonial-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -966,8 +1021,14 @@ textarea:focus-visible {
 
   .project-actions {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: var(--space-2);
+  }
+
+  .project-actions .btn {
+    flex: 1 1 145px;
+    min-height: 48px;
+    font-size: 0.95rem;
   }
 
   .testimonial-grid {
