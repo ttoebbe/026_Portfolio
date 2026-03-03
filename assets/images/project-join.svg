@@ -1,9 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Join project placeholder">
-  <rect width="1280" height="720" fill="#e9f0ff" />
-  <rect x="42" y="42" width="1196" height="72" rx="12" fill="#d4dcf7" />
-  <rect x="52" y="158" width="280" height="500" rx="14" fill="#c8d4ff" />
-  <rect x="360" y="158" width="280" height="500" rx="14" fill="#f7f9ff" />
-  <rect x="668" y="158" width="280" height="500" rx="14" fill="#f7f9ff" />
-  <rect x="976" y="158" width="252" height="500" rx="14" fill="#f7f9ff" />
-  <text x="50%" y="390" fill="#1e2c7f" font-family="monospace" font-size="76" text-anchor="middle">JOIN</text>
-</svg>

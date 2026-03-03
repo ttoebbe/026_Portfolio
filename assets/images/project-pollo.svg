@@ -1,8 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Pollo Loco project placeholder">
-  <rect width="1280" height="720" fill="#7ec7ff" />
-  <rect y="530" width="1280" height="190" fill="#89d26b" />
-  <circle cx="170" cy="120" r="74" fill="#ffd35f" />
-  <rect x="120" y="290" width="190" height="210" rx="24" fill="#f4a640" />
-  <circle cx="220" cy="280" r="48" fill="#ffe6c6" />
-  <text x="50%" y="390" fill="#f26a35" font-family="monospace" font-size="90" text-anchor="middle">EL POLLO LOCO</text>
-</svg>

@@ -35,7 +35,7 @@ window.PORTFOLIO_I18N = {
     "projects.join.imageAlt": "Screenshot des Projekts Join",
     "projects.join.desc":
       "Aufgabenmanager nach Kanban-Prinzip. Aufgaben erstellen, verschieben und in Team-Workflows organisieren.",
-    "projects.sharkie.imageAlt": "Screenshot des Projekts Sharkie",
+    "projects.sharkie.imageAlt": "Screenshot des Projekts Pokedex",
     "projects.sharkie.desc":
       "Side-Scrolling Browsergame mit objektorientiertem JavaScript. Besiege Gegner und sammle Unterwasser-Items.",
     "projects.pollo.imageAlt": "Screenshot des Projekts Pollo Loco",
@@ -117,7 +117,7 @@ window.PORTFOLIO_I18N = {
     "projects.join.imageAlt": "Screenshot of Join project",
     "projects.join.desc":
       "Task manager inspired by Kanban. Create, move and organize tasks in team workflows.",
-    "projects.sharkie.imageAlt": "Screenshot of Sharkie project",
+    "projects.sharkie.imageAlt": "Screenshot of Pokedex project",
     "projects.sharkie.desc":
       "Side-scrolling browser game built with object-oriented JavaScript. Defeat enemies and collect items.",
     "projects.pollo.imageAlt": "Screenshot of Pollo Loco project",
