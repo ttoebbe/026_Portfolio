@@ -1,0 +1,399 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcus Schmidt | Frontend Developer</title>
+    <meta name="description" content="Portfolio of Marcus Schmidt, frontend developer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/translations.js" defer></script>
+    <script type="module" src="scripts/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="Home">
+          <span class="logo-mark">&lt;MS&gt;</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#why-me" data-i18n="nav.why">Why me</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="lang-switch" aria-label="Language switch">
+          <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="section hero reveal">
+        <div class="container hero-grid">
+          <p class="availability" data-i18n="hero.available">Open to work</p>
+
+          <div class="hero-copy">
+            <p class="kicker" data-i18n="hero.role">Frontend Developer</p>
+            <h1 data-i18n="hero.name">Marcus Schmidt</h1>
+            <p class="scroll-hint" data-i18n="hero.scrollHint">Scroll to discover</p>
+          </div>
+
+          <div class="hero-image-frame">
+            <img
+              src="assets/images/hero-portrait.svg"
+              alt="Portrait of Marcus Schmidt"
+              data-i18n="hero.imageAlt"
+              data-i18n-attr="alt"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section why-me reveal" id="why-me">
+        <div class="container why-grid">
+          <div class="why-image-frame">
+            <img
+              src="assets/images/about-portrait.svg"
+              alt="Marcus outdoors"
+              data-i18n="why.imageAlt"
+              data-i18n-attr="alt"
+            />
+          </div>
+
+          <div class="why-content">
+            <h2 data-i18n="why.title">Why me</h2>
+            <p data-i18n="why.lead">
+              I turn user requirements into clean, maintainable interfaces and collaborate
+              effectively in agile teams.
+            </p>
+
+            <ul class="why-list">
+              <li>
+                <h3 data-i18n="why.item1.title">Located in Hamburg</h3>
+                <p data-i18n="why.item1.body">
+                  Based in Germany and available for local or remote collaboration.
+                </p>
+              </li>
+              <li>
+                <h3 data-i18n="why.item2.title">Remote-friendly</h3>
+                <p data-i18n="why.item2.body">
+                  Comfortable with async workflows, reviews, and distributed teamwork.
+                </p>
+              </li>
+              <li>
+                <h3 data-i18n="why.item3.title">Open to relocation</h3>
+                <p data-i18n="why.item3.body">
+                  Willing to move for a strong team and impactful product mission.
+                </p>
+              </li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary" data-i18n="cta.talk">Let's talk</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills reveal" id="skills">
+        <div class="container">
+          <h2 data-i18n="skills.title">My Skills</h2>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <span class="skill-icon">A</span>
+              <h3>Angular</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">TS</span>
+              <h3>TypeScript</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">JS</span>
+              <h3>JavaScript</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">H5</span>
+              <h3>HTML</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">C3</span>
+              <h3>CSS</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">API</span>
+              <h3>REST API</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">FB</span>
+              <h3>Firebase</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">G</span>
+              <h3>Git</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">SC</span>
+              <h3>Scrum</h3>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon">MD</span>
+              <h3>Material Design</h3>
+            </article>
+            <article class="skill-card skill-card-highlight">
+              <span class="skill-icon">?</span>
+              <h3 data-i18n="skills.challenge">Challenge me</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects reveal" id="projects">
+        <div class="container">
+          <h2 data-i18n="projects.title">My Projects</h2>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img
+                src="assets/images/project-join.svg"
+                alt="Screenshot of Join project"
+                data-i18n="projects.join.imageAlt"
+                data-i18n-attr="alt"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Join</h3>
+              <p class="stack">JavaScript | HTML | CSS | Firebase</p>
+              <p data-i18n="projects.join.desc">
+                Task manager inspired by Kanban. Create and organize tasks with drag and drop and
+                team assignment.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="btn btn-secondary"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="projects.github"
+                  >GitHub</a
+                >
+                <a
+                  class="btn btn-primary"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="projects.live"
+                  >Live Test</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reverse">
+            <div class="project-media">
+              <img
+                src="assets/images/project-sharkie.svg"
+                alt="Screenshot of Sharkie project"
+                data-i18n="projects.sharkie.imageAlt"
+                data-i18n-attr="alt"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Sharkie</h3>
+              <p class="stack">JavaScript | HTML | CSS | OOP</p>
+              <p data-i18n="projects.sharkie.desc">
+                Side-scrolling browser game using object-oriented JavaScript. Fight sea creatures
+                and collect coins.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="btn btn-secondary"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="projects.github"
+                  >GitHub</a
+                >
+                <a
+                  class="btn btn-primary"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="projects.live"
+                  >Live Test</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img
+                src="assets/images/project-pollo.svg"
+                alt="Screenshot of Pollo Loco project"
+                data-i18n="projects.pollo.imageAlt"
+                data-i18n-attr="alt"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Pollo Loco</h3>
+              <p class="stack">JavaScript | HTML | CSS</p>
+              <p data-i18n="projects.pollo.desc">
+                Jump-and-run game focused on object interaction and timing. Defeat enemies and
+                master each level.
+              </p>
+              <div class="project-actions">
+                <a
+                  class="btn btn-secondary"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="projects.github"
+                  >GitHub</a
+                >
+                <a
+                  class="btn btn-primary"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="projects.live"
+                  >Live Test</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section testimonials reveal">
+        <div class="container">
+          <h2 data-i18n="testimonials.title">Need a teammate? Here is what my colleagues say.</h2>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <h3 data-i18n="testimonials.one.name">Noah Mueller</h3>
+              <p class="role" data-i18n="testimonials.one.role">Project Partner</p>
+              <p data-i18n="testimonials.one.quote">
+                "Marcus keeps calm under pressure and delivers clean frontend solutions with great
+                structure."
+              </p>
+            </article>
+            <article class="testimonial-card">
+              <h3 data-i18n="testimonials.two.name">Evelyn Marr</h3>
+              <p class="role" data-i18n="testimonials.two.role">Project Mentor</p>
+              <p data-i18n="testimonials.two.quote">
+                "Very detail-oriented and collaborative. Communication was always clear and
+                constructive."
+              </p>
+            </article>
+            <article class="testimonial-card">
+              <h3 data-i18n="testimonials.three.name">Jens Krueger</h3>
+              <p class="role" data-i18n="testimonials.three.role">Scrum Master</p>
+              <p data-i18n="testimonials.three.quote">
+                "A reliable team player who turns requirements into user-focused interface
+                components."
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact reveal" id="contact">
+        <div class="container">
+          <h2 data-i18n="contact.title">Contact me</h2>
+
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <p data-i18n="contact.lead">
+                Do you have a project in mind or need frontend support? Send me a message and we can
+                discuss details.
+              </p>
+              <p>
+                <strong data-i18n="contact.emailLabel">Email:</strong>
+                <a id="contact-email" href="mailto:your@email.com">your@email.com</a>
+              </p>
+              <p>
+                <strong data-i18n="contact.phoneLabel">Phone:</strong>
+                <a id="contact-phone" href="tel:+49123456789">+49 123 456789</a>
+              </p>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <label for="name" class="sr-only" data-i18n="form.name.label">Your name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                data-i18n="form.name.placeholder"
+                data-i18n-attr="placeholder"
+                placeholder="Your name"
+              />
+
+              <label for="email" class="sr-only" data-i18n="form.email.label">Your email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                data-i18n="form.email.placeholder"
+                data-i18n-attr="placeholder"
+                placeholder="Your email"
+              />
+
+              <label for="message" class="sr-only" data-i18n="form.message.label"
+                >Your message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                data-i18n="form.message.placeholder"
+                data-i18n-attr="placeholder"
+                placeholder="Your message"
+              ></textarea>
+
+              <label class="checkbox-line" for="privacy-accepted">
+                <input id="privacy-accepted" name="privacy-accepted" type="checkbox" required />
+                <span data-i18n="form.privacy"
+                  >I have read the privacy policy and agree to the processing of my data.</span
+                >
+              </label>
+
+              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+              <button
+                type="submit"
+                class="btn btn-primary full"
+                id="submit-btn"
+                data-i18n="form.submit"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p id="footer-copy" data-i18n="footer.copy">Copyright {{year}} Marcus Schmidt</p>
+      </div>
+    </footer>
+  </body>
+</html>

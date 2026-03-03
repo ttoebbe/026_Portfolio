@@ -1,0 +1,30 @@
+<svg width="219" height="98" viewBox="0 0 219 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="liveButtonShadow" x="0" y="0" width="219" height="98" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dx="5" dy="5" />
+      <feGaussianBlur stdDeviation="7.5" />
+      <feComposite in2="hardAlpha" operator="out" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+    </filter>
+  </defs>
+  <g filter="url(#liveButtonShadow)">
+    <rect x="12" y="12" width="185" height="64" fill="#F5F3EB" stroke="#000000" stroke-width="4" />
+    <text
+      x="104.5"
+      y="50"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      fill="#000000"
+      font-family="Overpass, Arial, sans-serif"
+      font-size="17"
+      font-weight="700"
+      letter-spacing="-0.01em"
+    >
+      Live Test
+    </text>
+  </g>
+</svg>

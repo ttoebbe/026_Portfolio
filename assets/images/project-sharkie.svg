@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Sharkie project placeholder">
+  <rect width="1280" height="720" fill="#0d3f88" />
+  <rect y="500" width="1280" height="220" fill="#1282be" />
+  <circle cx="190" cy="110" r="68" fill="#f3cf51" />
+  <path d="M180 390 C360 300, 560 320, 750 390 C560 460, 360 480, 180 390" fill="#2de2f0" />
+  <path d="M650 430 C770 330, 990 340, 1160 420 C980 500, 780 520, 650 430" fill="#3bc6ff" />
+  <text x="50%" y="380" fill="#06f4df" font-family="monospace" font-size="96" text-anchor="middle">SHARKIE</text>
+</svg>
