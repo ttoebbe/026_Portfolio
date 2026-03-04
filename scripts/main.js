@@ -42,6 +42,7 @@ function applyTranslations() {
   document.documentElement.lang = currentLanguage;
   document.querySelectorAll("[data-translation]").forEach(applyTranslationToElement);
   document.querySelectorAll(".lang-btn").forEach(setLanguageButtonState);
+  syncMobileMenuToggleLabel();
 }
 
 /**
@@ -114,6 +115,130 @@ function initLanguageSwitch() {
   document.querySelectorAll(".lang-btn").forEach((button) => {
     button.addEventListener("click", onLanguageButtonClick);
   });
+}
+
+/**
+ * Initializes mobile menu interactions.
+ */
+function initMobileMenu() {
+  const elements = getMobileMenuElements();
+  if (!elements.menuToggle || !elements.panel || !elements.backdrop) {
+    return;
+  }
+  bindMobileMenuToggle(elements.menuToggle);
+  bindMobileMenuBackdrop(elements.backdrop);
+  bindMobileMenuLinks(elements.panel);
+  bindMobileMenuGlobalEvents();
+  setMobileMenuState(false);
+}
+
+/**
+ * Returns menu related DOM elements.
+ */
+function getMobileMenuElements() {
+  return {
+    menuToggle: document.getElementById("menu-toggle"),
+    panel: document.getElementById("mobile-nav-panel"),
+    backdrop: document.getElementById("mobile-nav-backdrop")
+  };
+}
+
+/**
+ * Binds menu toggle click.
+ */
+function bindMobileMenuToggle(menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    setMobileMenuState(!isExpanded);
+  });
+}
+
+/**
+ * Binds backdrop click to close menu.
+ */
+function bindMobileMenuBackdrop(backdrop) {
+  backdrop.addEventListener("click", closeMobileMenu);
+}
+
+/**
+ * Closes mobile menu on navigation link click.
+ */
+function bindMobileMenuLinks(panel) {
+  panel.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+}
+
+/**
+ * Binds global events for menu close behavior.
+ */
+function bindMobileMenuGlobalEvents() {
+  document.addEventListener("keydown", onMobileMenuKeydown);
+  window.addEventListener("resize", onViewportResize);
+}
+
+/**
+ * Handles keyboard events for menu.
+ */
+function onMobileMenuKeydown(event) {
+  if (event.key === "Escape") {
+    closeMobileMenu();
+  }
+}
+
+/**
+ * Closes mobile menu when leaving mobile viewport.
+ */
+function onViewportResize() {
+  if (window.innerWidth > 940) {
+    closeMobileMenu();
+  }
+}
+
+/**
+ * Closes mobile menu.
+ */
+function closeMobileMenu() {
+  setMobileMenuState(false);
+}
+
+/**
+ * Updates menu state and visual classes.
+ */
+function setMobileMenuState(isOpen) {
+  const elements = getMobileMenuElements();
+  if (!elements.menuToggle || !elements.panel || !elements.backdrop) {
+    return;
+  }
+  elements.menuToggle.classList.toggle("is-open", isOpen);
+  elements.panel.classList.toggle("is-open", isOpen);
+  elements.backdrop.classList.toggle("is-open", isOpen);
+  elements.menuToggle.setAttribute("aria-expanded", String(isOpen));
+  elements.backdrop.hidden = !isOpen;
+  document.body.classList.toggle("menu-open", isOpen);
+  setMobileMenuToggleLabel(elements.menuToggle, isOpen);
+}
+
+/**
+ * Syncs menu toggle label after language change.
+ */
+function syncMobileMenuToggleLabel() {
+  const { menuToggle } = getMobileMenuElements();
+  if (!menuToggle) {
+    return;
+  }
+  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+  setMobileMenuToggleLabel(menuToggle, isOpen);
+}
+
+/**
+ * Sets localized menu toggle label.
+ */
+function setMobileMenuToggleLabel(menuToggle, isOpen) {
+  const key = isOpen ? "nav.menu.close" : "nav.menu.open";
+  const label = getTranslation(key);
+  menuToggle.setAttribute("aria-label", label);
+  menuToggle.setAttribute("title", label);
 }
 
 /**
@@ -498,6 +623,7 @@ function onSubmitError(statusElement) {
 function init() {
   applyContactConfig();
   applyTranslations();
+  initMobileMenu();
   initLanguageSwitch();
   initSmoothScroll();
   initActiveNavigation();

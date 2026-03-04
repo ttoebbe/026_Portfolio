@@ -7,8 +7,10 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.skills": "Kompetenzen",
     "nav.projects": "Erfahrung",
     "nav.contact": "Kontakt",
+    "nav.menu.open": "Menü öffnen",
+    "nav.menu.close": "Menü schließen",
 
-    "hero.available": "Offen für neue Herausforderungen",
+    "hero.available": "sprechen Sie mich gerne an",
     "hero.role": "Digitalisierung & Smart Production",
     "hero.name": "Thomas Többe-Hömke",
     "hero.scrollHint": "Nach unten scrollen",
@@ -119,8 +121,10 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.skills": "Competencies",
     "nav.projects": "Experience",
     "nav.contact": "Contact",
+    "nav.menu.open": "Open menu",
+    "nav.menu.close": "Close menu",
 
-    "hero.available": "Open to new challenges",
+    "hero.available": "Feel free to reach out",
     "hero.role": "Digitalization & Smart Production",
     "hero.name": "Thomas Többe-Hömke",
     "hero.scrollHint": "Scroll down",
