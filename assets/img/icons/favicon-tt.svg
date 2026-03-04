@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" role="img" aria-label="TT">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-label="TT">
   <text
     x="50%"
     y="52%"
     text-anchor="middle"
     dominant-baseline="middle"
     font-family="'Fira Code', monospace"
-    font-size="23"
+    font-size="29"
     font-weight="700"
     fill="#ff8a80"
   >&lt;TT&gt;</text>
