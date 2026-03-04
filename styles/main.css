@@ -312,8 +312,6 @@ p {
   width: min(100%, 370px);
   height: 430px;
   overflow: hidden;
-  border: 2px solid rgba(0, 245, 212, 0.24);
-  background: linear-gradient(180deg, rgba(0, 245, 212, 0.12), rgba(13, 3, 48, 0.18));
 }
 
 .hero-image-frame img {
