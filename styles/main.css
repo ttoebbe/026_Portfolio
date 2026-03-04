@@ -478,10 +478,12 @@ p {
 
 .skill-card-highlight {
   position: relative;
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 .challenge-image {
-  width: min(78px, 100%);
+  width: min(281px, 100%);
   filter: saturate(1.08);
 }
 
@@ -975,11 +977,6 @@ textarea:focus-visible {
   .skills-grid {
     grid-template-columns: repeat(3, minmax(76px, 1fr));
     gap: 1.8rem 0.95rem;
-  }
-
-  .skill-card-highlight {
-    grid-column: span 3;
-    justify-self: center;
   }
 
   .project-actions {

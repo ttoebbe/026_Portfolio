@@ -11,14 +11,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.menu.close": "Menü schließen",
 
     "hero.available": "sprechen Sie mich gerne an",
-    "hero.role": "Digitalisierung & Smart Production",
+    "hero.role": "Digitalisierung, Smart Energy & Entwicklung",
     "hero.name": "Thomas Többe-Hömke",
     "hero.scrollHint": "Nach unten scrollen",
     "hero.imageAlt": "Portrait von Thomas Többe-Hömke",
 
     "why.title": "Mein Profil",
     "why.lead":
-      "Technisch orientierter Manager für Digitalisierung und Energiemanagement in Industrieumgebungen mit über 20 Jahren Erfahrung an der Schnittstelle von Elektrotechnik, Automatisierung und IT.",
+      "Technisch orientierter Manager für Digitalisierung, Smart Energy und Entwicklung in Industrieumgebungen mit über 20 Jahren Erfahrung an der Schnittstelle von Elektrotechnik, Automatisierung und IT.",
     "why.item1.title": "Standort Osnabrück/Emsland",
     "why.item1.body":
       "Regional in Merzen verankert, bei hohem Remoteanteil auch für weiter entfernte Standorte verfügbar.",
@@ -35,14 +35,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "skills.title": "Kernkompetenzen",
     "skills.challenge": "Neue Herausforderungen",
 
-    "projects.title": "My Projects",
-    "projects.join.imageAlt": "Screenshot of Join project",
+    "projects.title": "Meine Projekte",
+    "projects.join.imageAlt": "Screenshot des Join-Projekts",
     "projects.join.desc":
       "Task-Manager nach dem Kanban-Prinzip. Erstelle und organisiere Aufgaben per Drag-and-drop und weise Benutzer sowie Kategorien zu.",
-    "projects.pokedex.imageAlt": "Screenshot of Pokedex project",
+    "projects.pokedex.imageAlt": "Screenshot des Pokedex-Projekts",
     "projects.pokedex.desc":
       "Interaktive Pokedex-App mit der PokeAPI. Durchsuche, filtere und analysiere detaillierte Pokemon-Daten in einer klaren und responsiven Oberfläche.",
-    "projects.pollo.imageAlt": "Screenshot of Pollo Loco project",
+    "projects.pollo.imageAlt": "Screenshot des Pollo Loco-Projekts",
     "projects.pollo.desc":
       "Jump-and-Run-Spiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe, Münzen und Tabasco-Salsa zu sammeln, um gegen das verrückte Huhn zu kämpfen.",
     "projects.github": "GitHub",
@@ -125,14 +125,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.menu.close": "Close menu",
 
     "hero.available": "Feel free to reach out",
-    "hero.role": "Digitalization & Smart Production",
+    "hero.role": "Digitalization, Smart Energy & Development",
     "hero.name": "Thomas Többe-Hömke",
     "hero.scrollHint": "Scroll down",
     "hero.imageAlt": "Portrait of Thomas Többe-Hömke",
 
     "why.title": "My Profile",
     "why.lead":
-      "Technically oriented manager for digitalization and energy management in industrial environments with over 20 years of experience at the intersection of electrical engineering, automation and IT.",
+      "Technically oriented manager for digitalization, smart energy and development in industrial environments with over 20 years of experience at the intersection of electrical engineering, automation and IT.",
     "why.item1.title": "Located Osnabrück/Emsland",
     "why.item1.body":
       "Regionally based in Merzen, available for distant locations with high remote ratio.",
