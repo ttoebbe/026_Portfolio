@@ -385,6 +385,15 @@ h3 {
   margin: 0;
 }
 
+.why-i-am {
+  position: absolute;
+  color: var(--accent-orange);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: var(--weight-semi);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
 .why-list {
   list-style: none;
   padding: 0;
@@ -450,59 +459,65 @@ h3 {
 .why-title {
   position: absolute;
   top: 10px;
-  left: 800px;
+  left: 730px;
 }
 
 /* Why lead position */
 .why-lead {
   position: absolute;
   top: 82px;
-  left: 460px;
+  left: 390px;
   width: min(540px, calc(100% - 485px));
+}
+
+/* Why I am position */
+.why-i-am {
+  top: 202px;
+  left: 392px;
 }
 
 /* Why item 1 position (Text Standort) */
 .why-item-1 {
-  top: 194px;
-  left: 560px;
+  top: 184px;
+  left: 620px;
 }
 
 /* Why item 2 position (Text Technik und Führung) */
 .why-item-2 {
   top: 380px;
-  left: 550px;
+  left: 480px;
 }
 
 /* Why item 3 position (Text Erfahrung) */
 .why-item-3 {
   top: 304px;
-  left: 800px;
+  left: 730px;
 }
 
 /* Why CTA position (Lassen Sie uns sprechen)*/
 .why-cta {
   top: 490px;
-  left: 860px;
+  left: 790px;
 }
 
 /* Why arrow 1 position */
 .why-arrow-1 {
   top: 280px;
-  left: 532px;
+  left: 590px;
   width: 34px;
 }
 
 /* Why arrow 2 position */
 .why-arrow-2 {
   top: 398px;
-  left: 858px;
+  left: 790px;
   width: 30px;
 }
 
 /* Why arrow 3 position */
 .why-arrow-3 {
   top: 400px;
-  left: 947px;
+  left: 900px;
   width: 44px;
 }
 
@@ -524,6 +539,12 @@ h3 {
     top: 88px;
     left: 24px;
     width: min(660px, calc(100% - 48px));
+  }
+
+  .why-i-am {
+    top: 188px;
+    left: 24px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
 
   /* Why item 1 position */
@@ -607,6 +628,14 @@ h3 {
     left: 50%;
     transform: translateX(-50%);
     width: min(340px, calc(100% - 24px));
+    text-align: center;
+  }
+
+  .why-i-am {
+    top: 214px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
     text-align: center;
   }
 

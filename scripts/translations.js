@@ -19,6 +19,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "why.title": "Why me",
     "why.lead":
       "Technisch orientierter Manager für Digitalisierung, Smart Energy und Entwicklung in Industrieumgebungen mit über 20 Jahren Erfahrung an der Schnittstelle von Elektrotechnik, Automatisierung und IT.",
+    "why.iAm": "Ich bin",
     "why.item1.title": "Standort Osnabrück/Emsland",
     "why.item1.body":
       "Regional in Merzen verankert, bei hohem Remoteanteil auch für weiter entfernte Standorte verfügbar.",
@@ -133,6 +134,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "why.title": "Why me",
     "why.lead":
       "Technically oriented manager for digitalization, smart energy and development in industrial environments with over 20 years of experience at the intersection of electrical engineering, automation and IT.",
+    "why.iAm": "I am",
     "why.item1.title": "Located Osnabrück/Emsland",
     "why.item1.body":
       "Regionally based in Merzen, available for distant locations with high remote ratio.",
