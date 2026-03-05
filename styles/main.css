@@ -103,6 +103,12 @@ h3 {
   margin-inline: auto;
 }
 
+#main-content {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
 .section {
   padding-block: var(--space-7);
 }
