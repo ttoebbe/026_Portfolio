@@ -581,63 +581,63 @@ h3 {
 
   /* Why title position */
   .why-title {
-    top: 8px;
-    left: 24px;
+    top: 10px;
+    left: 370px;
   }
 
   /* Why lead position */
   .why-lead {
-    top: 88px;
-    left: 24px;
-    width: min(660px, calc(100% - 48px));
+    top: 82px;
+    left: 30px;
+    width: min(540px, calc(100% - 120px));
   }
 
   .why-i-am {
-    top: 188px;
-    left: 24px;
+    top: 202px;
+    left: 32px;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
 
   /* Why item 1 position */
   .why-item-1 {
-    top: 228px;
-    left: 24px;
+    top: 184px;
+    left: 260px;
   }
 
   /* Why item 2 position */
   .why-item-2 {
-    top: 308px;
-    left: 24px;
+    top: 380px;
+    left: 120px;
   }
 
   /* Why item 3 position */
   .why-item-3 {
-    top: 388px;
-    left: 24px;
+    top: 304px;
+    left: 370px;
   }
 
   /* Why CTA position */
   .why-cta {
-    top: 492px;
-    left: 24px;
+    top: 490px;
+    left: 430px;
   }
 
   /* Why arrow 1 position */
   .why-arrow-1 {
-    top: 190px;
-    left: 196px;
+    top: 280px;
+    left: 230px;
   }
 
   /* Why arrow 2 position */
   .why-arrow-2 {
-    top: 340px;
-    left: 382px;
+    top: 398px;
+    left: 430px;
   }
 
   /* Why arrow 3 position */
   .why-arrow-3 {
-    top: 435px;
-    left: 462px;
+    top: 400px;
+    left: 540px;
   }
 }
 
