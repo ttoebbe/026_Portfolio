@@ -30,6 +30,7 @@
 
   --container: 1110px;
   --header-h: 82px;
+  --marquee-h: 44px;
 }
 
 * {
@@ -137,6 +138,40 @@ h3 {
   background: var(--bg-header);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 8%, transparent);
+}
+
+.project-marquee {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  width: 100%;
+  height: var(--marquee-h);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 110;
+  background: color-mix(in srgb, var(--bg-main) 86%, black);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-cyan) 24%, transparent);
+}
+
+.project-marquee-track {
+  display: inline-flex;
+  min-width: max-content;
+  white-space: nowrap;
+  font-weight: var(--weight-bold);
+  animation: marquee-scroll 18s linear infinite;
+}
+
+.project-marquee-text {
+  display: inline-flex;
+  align-items: center;
+  min-width: 100vw;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-cyan);
+  letter-spacing: 0.05em;
+  font-size: 0.94rem;
+  padding-inline: 1.4rem;
 }
 
 .header-inner {
@@ -262,10 +297,20 @@ h3 {
 }
 
 .hero {
-  padding-top: calc(var(--header-h) + 1.8rem);
+  padding-top: calc(var(--header-h) + var(--marquee-h) + 1.8rem);
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .hero-grid {
@@ -1197,7 +1242,7 @@ textarea:focus-visible {
 
   .hero {
     min-height: auto;
-    padding-top: calc(var(--header-h) + 1.3rem);
+    padding-top: calc(var(--header-h) + var(--marquee-h) + 1.3rem);
   }
 
   .hero-grid {
@@ -1265,6 +1310,7 @@ textarea:focus-visible {
 @media (max-width: 640px) {
   :root {
     --space-7: 3.1rem;
+    --marquee-h: 38px;
   }
 
   .container {
@@ -1273,6 +1319,11 @@ textarea:focus-visible {
 
   .header-panel {
     width: 100%;
+  }
+
+  .project-marquee-text {
+    font-size: 0.82rem;
+    padding-inline: 1rem;
   }
 
   .hero-copy h1 {
@@ -1344,5 +1395,10 @@ textarea:focus-visible {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .project-marquee-track {
+    animation: none;
+    transform: translateX(0);
   }
 }
