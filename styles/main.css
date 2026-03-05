@@ -3,17 +3,10 @@
   --bg-main-alt: #1a0652;
   --bg-surface: rgba(8, 3, 35, 0.94);
   --bg-surface-soft: rgba(13, 5, 49, 0.72);
-  --text-main: #fffcf3;
-  --text-soft: #f0dbc7;
+  --text-primary: #fffcf3;
   --text-muted: #b0acd2;
   --accent-cyan: #00f5d4;
-  --accent-cyan-strong: #0cffde;
   --accent-orange: #f2876f;
-  --line-cyan: rgba(0, 245, 212, 0.62);
-  --line-orange: rgba(242, 135, 111, 0.5);
-  --danger: #ff6e8a;
-  --success: #6dffae;
-  --arrow-red: #eb0e0e;
 
   --radius-sm: 4px;
   --radius-md: 10px;
@@ -41,7 +34,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  color: var(--text-main);
+  color: var(--text-primary);
   font-family: "Source Sans 3", sans-serif;
   line-height: 1.45;
   background:
@@ -99,7 +92,7 @@ p {
   position: absolute;
   left: -9999px;
   top: 0;
-  color: #0c032f;
+  color: var(--bg-main);
   background: var(--accent-cyan);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
@@ -118,7 +111,7 @@ p {
   height: var(--header-h);
   background: rgba(10, 3, 40, 0.8);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 252, 243, 0.08);
+  border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 8%, transparent);
 }
 
 .header-inner {
@@ -144,7 +137,7 @@ p {
   display: none;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--line-cyan);
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 62%, transparent);
   border-radius: var(--radius-sm);
   background: transparent;
   cursor: pointer;
@@ -262,7 +255,7 @@ p {
   justify-self: start;
   letter-spacing: 0.08em;
   color: var(--accent-orange);
-  border: 1px solid var(--line-cyan);
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 62%, transparent);
   padding: 0.9rem 0.45rem;
   font-size: 0.74rem;
 }
@@ -330,7 +323,7 @@ p {
 
 .why-image-frame {
   width: 100%;
-  border: 1px solid var(--line-orange);
+  border: 1px solid color-mix(in srgb, var(--accent-orange) 50%, transparent);
   overflow: hidden;
 }
 
@@ -395,7 +388,7 @@ p {
 }
 
 .why-item p {
-  color: var(--text-soft);
+  color: var(--text-muted);
   font-size: 0.92rem;
 }
 
@@ -419,24 +412,24 @@ p {
 .btn-primary {
   background: var(--accent-cyan);
   border-color: var(--accent-cyan);
-  color: #10033b;
+  color: var(--bg-main);
 }
 
 .btn-primary:hover {
-  background: var(--accent-cyan-strong);
-  border-color: var(--accent-cyan-strong);
-  box-shadow: 0 0 16px rgba(12, 255, 222, 0.35);
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent-cyan) 35%, transparent);
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--accent-orange);
-  border-color: var(--line-cyan);
+  border-color: color-mix(in srgb, var(--accent-cyan) 62%, transparent);
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 245, 212, 0.12);
-  color: var(--text-main);
+  background: color-mix(in srgb, var(--accent-cyan) 12%, transparent);
+  color: var(--text-primary);
 }
 
 .skills .container,
@@ -512,7 +505,7 @@ p {
 }
 
 .project-media {
-  border: 1px solid rgba(255, 252, 243, 0.14);
+  border: 1px solid color-mix(in srgb, var(--text-primary) 14%, transparent);
   overflow: hidden;
 }
 
@@ -535,7 +528,7 @@ p {
 }
 
 .project-content p {
-  color: var(--text-soft);
+  color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: var(--space-3);
@@ -555,7 +548,7 @@ p {
 }
 
 .testimonial-card {
-  border: 1px solid var(--line-orange);
+  border: 1px solid color-mix(in srgb, var(--accent-orange) 50%, transparent);
   background: var(--bg-surface-soft);
   padding: var(--space-3) var(--space-4);
   min-height: 220px;
@@ -574,7 +567,7 @@ p {
 }
 
 .testimonial-card p:last-child {
-  color: var(--text-soft);
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -586,7 +579,7 @@ p {
 }
 
 .contact-copy p {
-  color: var(--text-soft);
+  color: var(--text-muted);
   margin-bottom: var(--space-3);
 }
 
@@ -602,10 +595,10 @@ p {
 #contact-form input,
 #contact-form textarea {
   width: 100%;
-  border: 1px solid var(--line-cyan);
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 62%, transparent);
   border-radius: 0;
   background: transparent;
-  color: var(--text-main);
+  color: var(--text-primary);
   padding: 0.78rem 0.82rem;
   font-size: 0.95rem;
   font-family: inherit;
@@ -641,11 +634,11 @@ p {
 }
 
 .form-status.error {
-  color: var(--danger);
+  color: var(--accent-orange);
 }
 
 .form-status.success {
-  color: var(--success);
+  color: var(--accent-cyan);
 }
 
 .full {
@@ -653,7 +646,7 @@ p {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(255, 252, 243, 0.14);
+  border-top: 1px solid color-mix(in srgb, var(--text-primary) 14%, transparent);
   padding: 2rem 0;
 }
 
@@ -765,7 +758,7 @@ p {
 
 .legal-section {
   max-width: 840px;
-  color: var(--text-soft);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -776,7 +769,7 @@ p {
 }
 
 .legal-section h3 {
-  color: var(--text-main);
+  color: var(--text-primary);
   margin: 1.1rem 0 0.4rem;
   font-size: 1.02rem;
 }
@@ -844,7 +837,7 @@ textarea:focus-visible {
     width: min(320px, 100%);
     height: calc(100vh - var(--header-h));
     background: var(--bg-surface);
-    border-left: 1px solid var(--line-cyan);
+    border-left: 1px solid color-mix(in srgb, var(--accent-cyan) 62%, transparent);
     padding: 1.3rem 1.25rem;
     display: grid;
     align-content: start;
@@ -867,7 +860,7 @@ textarea:focus-visible {
 
   .main-nav > a {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 252, 243, 0.12);
+    border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 12%, transparent);
     padding-bottom: 0.5rem;
   }
 
