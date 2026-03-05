@@ -9,6 +9,13 @@
   --text-muted: #b0acd2;
   --accent-cyan: #02f4bf;
   --accent-orange: #e15544;
+  --font-primary: "Roboto Mono", monospace;
+  --font-code: "Roboto Mono", monospace;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi: 600;
+  --weight-bold: 700;
 
   --radius-sm: 4px;
   --radius-md: 10px;
@@ -37,8 +44,9 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text-primary);
-  font-family: "Source Sans 3", sans-serif;
-  line-height: 1.45;
+  font-family: var(--font-primary);
+  font-weight: var(--weight-regular);
+  line-height: 1.42;
   background:
     radial-gradient(circle at 16% 16%, rgba(0, 245, 212, 0.1), transparent 36%),
     radial-gradient(circle at 81% 9%, rgba(242, 135, 111, 0.12), transparent 33%),
@@ -71,7 +79,7 @@ h3,
 .kicker,
 .contact-rail,
 .stack {
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-code);
 }
 
 h1,
@@ -79,6 +87,15 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+h1 {
+  font-weight: var(--weight-bold);
+}
+
+h2,
+h3 {
+  font-weight: var(--weight-semi);
 }
 
 .container {
@@ -132,7 +149,7 @@ p {
   color: var(--accent-orange);
   font-size: 1.28rem;
   letter-spacing: 0.04em;
-  font-weight: 600;
+  font-weight: var(--weight-bold);
 }
 
 .menu-toggle {
@@ -177,7 +194,8 @@ p {
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
+  font-weight: var(--weight-medium);
 }
 
 .main-nav > a {
@@ -197,7 +215,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.36rem;
-  font-size: 0.86rem;
+  font-size: 0.82rem;
+  font-weight: var(--weight-medium);
   color: var(--accent-orange);
 }
 
@@ -260,6 +279,7 @@ p {
   border: 1px solid color-mix(in srgb, var(--accent-cyan) 62%, transparent);
   padding: 0.9rem 0.45rem;
   font-size: 0.74rem;
+  font-weight: var(--weight-medium);
 }
 
 .hero-copy {
@@ -269,16 +289,18 @@ p {
 .kicker {
   color: var(--accent-cyan);
   text-transform: uppercase;
-  font-size: clamp(1.15rem, 2.4vw, 2.15rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(1.05rem, 2.1vw, 1.9rem);
+  letter-spacing: 0.095em;
+  font-weight: var(--weight-bold);
   margin-bottom: var(--space-2);
 }
 
 .hero-copy h1 {
   color: var(--accent-cyan);
-  font-size: clamp(2.1rem, 5.8vw, 4.2rem);
-  line-height: 1.04;
-  letter-spacing: 0.01em;
+  font-size: clamp(2.25rem, 6vw, 4.35rem);
+  line-height: 1.03;
+  letter-spacing: 0.015em;
+  font-weight: var(--weight-bold);
 }
 
 .hero-scroll {
@@ -342,8 +364,9 @@ p {
 .testimonials h2,
 .contact h2 {
   color: var(--accent-orange);
-  font-size: clamp(1.95rem, 4vw, 3rem);
-  letter-spacing: 0.02em;
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  letter-spacing: 0.03em;
+  font-weight: var(--weight-semi);
   margin-bottom: var(--space-4);
 }
 
@@ -355,7 +378,9 @@ p {
 
 .why-content > p {
   color: var(--accent-cyan);
-  font-size: 1.02rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-weight: var(--weight-regular);
   max-width: 60ch;
   margin-bottom: var(--space-4);
 }
@@ -385,13 +410,16 @@ p {
 
 .why-item h3 {
   color: var(--accent-cyan);
-  font-size: 0.96rem;
+  font-size: 0.92rem;
+  font-weight: var(--weight-semi);
   margin-bottom: 0.2rem;
 }
 
 .why-item p {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: var(--weight-regular);
 }
 
 .btn {
@@ -400,9 +428,10 @@ p {
   justify-content: center;
   border: 1px solid transparent;
   min-height: 46px;
-  min-width: 130px;
+  min-width: 136px;
   padding: 0.62rem 1.05rem;
   font-size: 0.92rem;
+  font-weight: var(--weight-medium);
   cursor: pointer;
   transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
 }
@@ -468,7 +497,7 @@ p {
 .skill-card h3 {
   color: var(--accent-cyan);
   font-size: 0.84rem;
-  font-weight: 500;
+  font-weight: var(--weight-semi);
 }
 
 .skill-card-highlight {
@@ -520,19 +549,22 @@ p {
 .project-content h3 {
   color: var(--accent-cyan);
   font-size: clamp(1.9rem, 4vw, 3.1rem);
+  font-weight: var(--weight-bold);
   margin-bottom: var(--space-2);
 }
 
 .stack {
   color: var(--accent-orange);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
+  font-weight: var(--weight-medium);
   margin-bottom: var(--space-3);
 }
 
 .project-content p {
   color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.42;
+  font-weight: var(--weight-regular);
   margin-bottom: var(--space-3);
 }
 
@@ -559,18 +591,22 @@ p {
 .testimonial-card h3 {
   color: var(--accent-orange);
   font-size: 1.05rem;
+  font-weight: var(--weight-semi);
   margin-bottom: 0.2rem;
 }
 
 .testimonial-card .role {
   color: var(--accent-cyan);
   font-size: 0.82rem;
+  font-weight: var(--weight-semi);
   margin-bottom: var(--space-2);
 }
 
 .testimonial-card p:last-child {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
+  line-height: 1.42;
+  font-weight: var(--weight-regular);
 }
 
 .contact-grid {
@@ -582,6 +618,9 @@ p {
 
 .contact-copy p {
   color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.42;
+  font-weight: var(--weight-regular);
   margin-bottom: var(--space-3);
 }
 
@@ -602,7 +641,9 @@ p {
   background: transparent;
   color: var(--text-primary);
   padding: 0.78rem 0.82rem;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  font-weight: var(--weight-regular);
   font-family: inherit;
 }
 
@@ -621,7 +662,9 @@ p {
   align-items: flex-start;
   gap: 0.65rem;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.38;
+  font-weight: var(--weight-light);
 }
 
 .checkbox-line input {
@@ -632,7 +675,8 @@ p {
 
 .form-status {
   min-height: 1.34rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: var(--weight-regular);
 }
 
 .form-status.error {
@@ -666,14 +710,16 @@ p {
 }
 
 .footer-logo {
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-code);
   color: var(--accent-orange);
   font-size: 1.36rem;
+  font-weight: var(--weight-bold);
 }
 
 .footer-tagline {
   color: var(--text-muted);
-  font-size: 0.84rem;
+  font-size: 0.78rem;
+  font-weight: var(--weight-regular);
 }
 
 .footer-social {
@@ -698,7 +744,8 @@ p {
 .footer-legal {
   justify-self: end;
   text-align: right;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: var(--weight-regular);
   color: var(--text-muted);
 }
 
@@ -732,15 +779,16 @@ p {
 
 .nav-brand {
   color: var(--accent-orange);
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-code);
   font-size: 1.24rem;
-  font-weight: 600;
+  font-weight: var(--weight-bold);
 }
 
 .back-link {
   color: var(--text-muted);
   font-size: 0.86rem;
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-code);
+  font-weight: var(--weight-medium);
 }
 
 .back-link:hover {
@@ -761,19 +809,23 @@ p {
 .legal-section {
   max-width: 840px;
   color: var(--text-muted);
-  line-height: 1.6;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  font-weight: var(--weight-regular);
 }
 
 .legal-section h2 {
   color: var(--accent-cyan);
   margin: 1.9rem 0 0.8rem;
   font-size: 1.24rem;
+  font-weight: var(--weight-semi);
 }
 
 .legal-section h3 {
   color: var(--text-primary);
   margin: 1.1rem 0 0.4rem;
   font-size: 1.02rem;
+  font-weight: var(--weight-semi);
 }
 
 .legal-section p {
@@ -856,7 +908,7 @@ textarea:focus-visible {
   .main-nav {
     display: grid;
     gap: 0.8rem;
-    font-size: 1rem;
+    font-size: 1.02rem;
     justify-items: start;
   }
 
@@ -868,7 +920,7 @@ textarea:focus-visible {
 
   .lang-switch {
     justify-self: start;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
   }
 
   .hero {
@@ -979,7 +1031,7 @@ textarea:focus-visible {
   }
 
   .project-actions .btn {
-    min-width: 124px;
+    min-width: 132px;
   }
 
   .testimonial-grid {
