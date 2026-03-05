@@ -1,12 +1,14 @@
 :root {
-  --bg-main: #14043a;
-  --bg-main-alt: #1a0652;
-  --bg-surface: rgba(8, 3, 35, 0.94);
-  --bg-surface-soft: rgba(13, 5, 49, 0.72);
+  --bg-main: #0b042d;
+  --bg-main-alt: #1f0b80;
+  --bg-main-end: #241085;
+  --bg-header: rgba(11, 4, 45, 0.8);
+  --bg-surface: rgba(11, 4, 47, 0.94);
+  --bg-surface-soft: rgba(36, 16, 133, 0.72);
   --text-primary: #fffcf3;
   --text-muted: #b0acd2;
-  --accent-cyan: #00f5d4;
-  --accent-orange: #f2876f;
+  --accent-cyan: #02f4bf;
+  --accent-orange: #e15544;
 
   --radius-sm: 4px;
   --radius-md: 10px;
@@ -41,7 +43,7 @@ body {
     radial-gradient(circle at 16% 16%, rgba(0, 245, 212, 0.1), transparent 36%),
     radial-gradient(circle at 81% 9%, rgba(242, 135, 111, 0.12), transparent 33%),
     radial-gradient(circle at 20% 82%, rgba(0, 245, 212, 0.07), transparent 40%),
-    linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main-alt) 58%, #12023a 100%);
+    linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main-alt) 58%, var(--bg-main-end) 100%);
 }
 
 body.menu-open {
@@ -109,7 +111,7 @@ p {
   inset: 0 0 auto;
   z-index: 120;
   height: var(--header-h);
-  background: rgba(10, 3, 40, 0.8);
+  background: var(--bg-header);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 8%, transparent);
 }
