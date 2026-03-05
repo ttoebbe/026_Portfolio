@@ -44,7 +44,7 @@
 
         <div class="header-panel" id="mobile-nav-panel">
           <nav class="main-nav" aria-label="Main navigation">
-            <a href="#profile" data-translation="nav.why">Profil</a>
+            <a href="#why-me" data-translation="nav.why">Why me</a>
             <a href="#skills" data-translation="nav.skills">Kompetenzen</a>
             <a href="#projects" data-translation="nav.projects">Erfahrung</a>
             <a href="#contact" data-translation="nav.contact">Kontakt</a>
@@ -92,9 +92,9 @@
         </div>
       </section>
 
-      <section class="section why-me reveal" id="profile">
-        <div class="container why-grid">
-          <div class="why-image-frame">
+      <section class="section why-me reveal" id="why-me">
+        <div class="container why-layout">
+          <div class="why-image-frame why-image-pos">
             <img
               src="assets/img/TT/portfolio_Thomas3.png"
               alt="Thomas outdoors"
@@ -104,49 +104,49 @@
           </div>
 
           <div class="why-content">
-            <h2 data-translation="why.title">Why me</h2>
-            <p data-translation="why.lead">
+            <h2 class="why-title" data-translation="why.title">Why me</h2>
+            <p class="why-lead" data-translation="why.lead">
               I turn user requirements into clean, maintainable interfaces and collaborate
               effectively in agile teams.
             </p>
 
             <ul class="why-list">
-              <li class="why-item">
+              <li class="why-item why-item-1">
                 <img
                   class="why-icon"
                   src="assets/img/icons/sectionWhyMe/house.svg"
                   alt=""
                   aria-hidden="true"
                 />
-                <div>
+                <div class="why-item-copy">
                   <h3 data-translation="why.item1.title">Located in Hamburg</h3>
                   <p data-translation="why.item1.body">
                     Based in Germany and available for local or remote collaboration.
                   </p>
                 </div>
               </li>
-              <li class="why-item">
+              <li class="why-item why-item-2">
                 <img
                   class="why-icon"
                   src="assets/img/icons/sectionWhyMe/pc remote.svg"
                   alt=""
                   aria-hidden="true"
                 />
-                <div>
+                <div class="why-item-copy">
                   <h3 data-translation="why.item2.title">Remote-friendly</h3>
                   <p data-translation="why.item2.body">
                     Comfortable with async workflows, reviews, and distributed teamwork.
                   </p>
                 </div>
               </li>
-              <li class="why-item">
+              <li class="why-item why-item-3">
                 <img
                   class="why-icon"
                   src="assets/img/icons/sectionWhyMe/projekt-arrow.svg"
                   alt=""
                   aria-hidden="true"
                 />
-                <div>
+                <div class="why-item-copy">
                   <h3 data-translation="why.item3.title">Open to relocation</h3>
                   <p data-translation="why.item3.body">
                     Willing to move for a strong team and impactful product mission.
@@ -155,8 +155,29 @@
               </li>
             </ul>
 
-            <a href="#contact" class="btn btn-primary" data-translation="cta.talk">Let's talk</a>
+            <a href="#contact" class="btn btn-primary why-cta" data-translation="cta.talk"
+              >Let's talk</a
+            >
           </div>
+
+          <img
+            class="why-arrow why-arrow-1"
+            src="assets/img/icons/sectionWhyMe/arrow down.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="why-arrow why-arrow-2"
+            src="assets/img/icons/sectionWhyMe/arrow up.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="why-arrow why-arrow-3"
+            src="assets/img/icons/sectionWhyMe/Arrow circle down.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
       </section>
 

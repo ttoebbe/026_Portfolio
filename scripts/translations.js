@@ -3,7 +3,7 @@
  */
 window.PORTFOLIO_TRANSLATIONS = {
   de: {
-    "nav.why": "Profil",
+    "nav.why": "Why me",
     "nav.skills": "Kompetenzen",
     "nav.projects": "Erfahrung",
     "nav.contact": "Kontakt",
@@ -16,7 +16,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "hero.scrollHint": "Nach unten scrollen",
     "hero.imageAlt": "Portrait von Thomas Többe-Hömke",
 
-    "why.title": "Mein Profil",
+    "why.title": "Why me",
     "why.lead":
       "Technisch orientierter Manager für Digitalisierung, Smart Energy und Entwicklung in Industrieumgebungen mit über 20 Jahren Erfahrung an der Schnittstelle von Elektrotechnik, Automatisierung und IT.",
     "why.item1.title": "Standort Osnabrück/Emsland",
@@ -117,7 +117,7 @@ window.PORTFOLIO_TRANSLATIONS = {
   },
 
   en: {
-    "nav.why": "Profile",
+    "nav.why": "Why me",
     "nav.skills": "Competencies",
     "nav.projects": "Experience",
     "nav.contact": "Contact",
@@ -130,7 +130,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "hero.scrollHint": "Scroll down",
     "hero.imageAlt": "Portrait of Thomas Többe-Hömke",
 
-    "why.title": "My Profile",
+    "why.title": "Why me",
     "why.lead":
       "Technically oriented manager for digitalization, smart energy and development in industrial environments with over 20 years of experience at the intersection of electrical engineering, automation and IT.",
     "why.item1.title": "Located Osnabrück/Emsland",
