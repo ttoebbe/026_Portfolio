@@ -450,59 +450,59 @@ h3 {
 .why-title {
   position: absolute;
   top: 10px;
-  left: 460px;
+  left: 800px;
 }
 
 /* Why lead position */
 .why-lead {
   position: absolute;
-  top: 92px;
+  top: 82px;
   left: 460px;
   width: min(540px, calc(100% - 485px));
 }
 
-/* Why item 1 position */
+/* Why item 1 position (Text Standort) */
 .why-item-1 {
-  top: 224px;
-  left: 460px;
+  top: 194px;
+  left: 560px;
 }
 
-/* Why item 2 position */
+/* Why item 2 position (Text Technik und Führung) */
 .why-item-2 {
-  top: 304px;
-  left: 460px;
+  top: 380px;
+  left: 550px;
 }
 
-/* Why item 3 position */
+/* Why item 3 position (Text Erfahrung) */
 .why-item-3 {
-  top: 384px;
-  left: 460px;
+  top: 304px;
+  left: 800px;
 }
 
-/* Why CTA position */
+/* Why CTA position (Lassen Sie uns sprechen)*/
 .why-cta {
   top: 490px;
-  left: 460px;
+  left: 860px;
 }
 
 /* Why arrow 1 position */
 .why-arrow-1 {
-  top: 186px;
-  left: 632px;
+  top: 280px;
+  left: 532px;
   width: 34px;
 }
 
 /* Why arrow 2 position */
 .why-arrow-2 {
-  top: 338px;
-  left: 818px;
+  top: 398px;
+  left: 858px;
   width: 30px;
 }
 
 /* Why arrow 3 position */
 .why-arrow-3 {
-  top: 430px;
-  left: 897px;
+  top: 400px;
+  left: 947px;
   width: 44px;
 }
 
