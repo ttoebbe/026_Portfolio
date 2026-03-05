@@ -13,6 +13,7 @@
   --line-orange: rgba(242, 135, 111, 0.5);
   --danger: #ff6e8a;
   --success: #6dffae;
+  --arrow-red: #eb0e0e;
 
   --radius-sm: 4px;
   --radius-md: 10px;
@@ -295,8 +296,7 @@ p {
 }
 
 .scroll-icon {
-  width: 34px;
-  filter: invert(1);
+  width: 100px;
   opacity: 0.74;
 }
 
