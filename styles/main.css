@@ -642,13 +642,75 @@ h3 {
 }
 
 @media (max-width: 820px) {
-  /* WHY ME MOBILE POSITIONS */
+  /* WHY ME MOBILE – flex-flow layout (no fixed top-values) */
   .why-layout {
-    min-height: 790px;
+    min-height: unset;
   }
 
+  /* Hide image & decorative arrows on mobile */
+  .why-image-pos {
+    display: none;
+  }
+
+  .why-arrow-1,
+  .why-arrow-2,
+  .why-arrow-3 {
+    display: none;
+  }
+
+  /* Switch why-content to vertical flex */
+  .why-content {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    padding-block: var(--space-5);
+  }
+
+  /* Reset absolute positioning for all children */
+  .why-title,
+  .why-lead,
+  .why-i-am,
+  .why-cta {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+  }
+
+  .why-title {
+    width: calc(100% - 24px);
+    margin-bottom: 0;
+  }
+
+  .why-lead {
+    width: min(380px, calc(100% - 24px));
+  }
+
+  .why-i-am {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+    margin-bottom: calc(var(--space-2) * -1);
+  }
+
+  /* List becomes a normal block flow */
+  .why-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    width: 100%;
+  }
+
+  /* Items: static, centered */
   .why-item {
-    width: min(300px, calc(100% - 24px));
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    width: min(320px, calc(100% - 24px));
+    text-align: left;
   }
 
   .why-item h3 {
@@ -657,85 +719,6 @@ h3 {
 
   .why-item p {
     font-size: 0.84rem;
-  }
-
-  /* Why image position */
-  .why-image-pos {
-    display: none;
-  }
-
-  /* Why title position */
-  .why-title {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 24px);
-    text-align: center;
-  }
-
-  /* Why lead position */
-  .why-lead {
-    top: 82px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(340px, calc(100% - 24px));
-    text-align: center;
-  }
-
-  .why-i-am {
-    top: 214px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(1.7rem, 8vw, 2.2rem);
-    text-align: center;
-  }
-
-  /* Why item 1 position */
-  .why-item-1 {
-    top: 262px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Why item 2 position */
-  .why-item-2 {
-    top: 346px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Why item 3 position */
-  .why-item-3 {
-    top: 430px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Why CTA position */
-  .why-cta {
-    top: 560px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Why arrow 1 position */
-  .why-arrow-1 {
-    top: 226px;
-    left: 16px;
-    width: 28px;
-  }
-
-  /* Why arrow 2 position */
-  .why-arrow-2 {
-    top: 515px;
-    right: 18px;
-    left: auto;
-    width: 26px;
-  }
-
-  /* Why arrow 3 position */
-  .why-arrow-3 {
-    display: none;
   }
 }
 
