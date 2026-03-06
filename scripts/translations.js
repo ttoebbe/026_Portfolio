@@ -3,7 +3,7 @@
  */
 window.PORTFOLIO_TRANSLATIONS = {
   de: {
-    "nav.why": "Why me",
+    "nav.why": "Warum ich",
     "nav.skills": "Kompetenzen",
     "nav.projects": "Erfahrung",
     "nav.contact": "Kontakt",
@@ -16,7 +16,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "hero.scrollHint": "Nach unten scrollen",
     "hero.imageAlt": "Portrait von Thomas Többe-Hömke",
 
-    "why.title": "Why me",
+    "why.title": "Warum ich",
     "why.lead":
       "Technisch orientierter Manager für Digitalisierung, Smart Energy und Entwicklung in Industrieumgebungen mit über 20 Jahren Erfahrung an der Schnittstelle von Elektrotechnik, Automatisierung und IT.",
     "why.iAm": "Ich bin",
