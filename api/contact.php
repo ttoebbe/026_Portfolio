@@ -76,6 +76,13 @@ $headers[] = "From: Website Kontakt <{$siteEmail}>";
 $headers[] = "Reply-To: {$replyTo}";
 $headers[] = "Return-Path: {$siteEmail}";
 
+$mailWarning = null;
+set_error_handler(static function (int $severity, string $message) use (&$mailWarning): bool {
+    $mailWarning = $message;
+    return false;
+});
+error_clear_last();
+
 $success = mail(
     $siteEmail,
     $subject,
@@ -84,8 +91,17 @@ $success = mail(
     "-f {$siteEmail}"
 );
 
+restore_error_handler();
+
 if (!$success) {
-    respond(500, ["success" => false, "error" => "Mail delivery failed"]);
+    $lastError = error_get_last();
+    $reason = $mailWarning
+        ?? (is_array($lastError) && isset($lastError["message"]) ? (string)$lastError["message"] : null)
+        ?? "mail() returned false. Mail transport is likely not configured on the server.";
+
+    error_log("[contact.php] Mail delivery failed: {$reason}");
+
+    respond(500, ["success" => false, "error" => "Mail delivery failed", "reason" => $reason]);
 }
 
 respond(200, ["success" => true]);

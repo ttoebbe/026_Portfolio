@@ -534,8 +534,8 @@ async function submitContact(form, submitButton, statusElement, endpoint, payloa
   try {
     await sendRequest(endpoint, requestOptions);
     onSubmitSuccess(form, statusElement);
-  } catch (_error) {
-    onSubmitError(statusElement);
+  } catch (error) {
+    onSubmitError(statusElement, error, endpoint, method);
   }
   setSubmitDisabled(submitButton, false);
 }
@@ -590,8 +590,28 @@ function toSearchParams(payload) {
  */
 async function sendRequest(endpoint, requestOptions) {
   const response = await fetch(endpoint, requestOptions);
+  const contentType = response.headers.get("content-type") || "";
+  const isJson = contentType.includes("application/json");
+  const data = isJson ? await safeParseJson(response) : null;
   if (!response.ok) {
-    throw new Error(`Request failed with status ${response.status}`);
+    const apiError = isJson && data && typeof data.error === "string" ? data.error : "Request failed";
+    const apiReason = isJson && data && typeof data.reason === "string" ? data.reason : "";
+    const reasonSuffix = apiReason ? ` | reason: ${apiReason}` : "";
+    throw new Error(`${apiError} (status ${response.status})${reasonSuffix}`);
+  }
+  if (isJson && data && data.success !== true) {
+    throw new Error("Request failed: success flag missing");
+  }
+}
+
+/**
+ * Parses JSON safely and returns null on parse errors.
+ */
+async function safeParseJson(response) {
+  try {
+    return await response.json();
+  } catch (_error) {
+    return null;
   }
 }
 
@@ -613,8 +633,14 @@ function onSubmitSuccess(form, statusElement) {
 /**
  * Handles submit error state.
  */
-function onSubmitError(statusElement) {
+function onSubmitError(statusElement, error, endpoint, method) {
   setStatus(statusElement, getTranslation("form.status.error"), "error");
+  const reason = error instanceof Error ? error.message : String(error);
+  console.error("[Contact Form] Send failed", {
+    endpoint,
+    method,
+    reason
+  });
 }
 
 /**
