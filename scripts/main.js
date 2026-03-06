@@ -532,8 +532,8 @@ async function submitContact(form, submitButton, statusElement, endpoint, payloa
   setSubmitDisabled(submitButton, true);
   setStatus(statusElement, getTranslation("form.status.sending"));
   try {
-    await sendRequest(endpoint, requestOptions);
-    onSubmitSuccess(form, statusElement);
+    const result = await sendRequest(endpoint, requestOptions);
+    onSubmitSuccess(form, statusElement, result);
   } catch (error) {
     onSubmitError(statusElement, error, endpoint, method);
   }
@@ -589,21 +589,53 @@ function toSearchParams(payload) {
  * Executes request and validates response.
  */
 async function sendRequest(endpoint, requestOptions) {
+  logSendStart(endpoint, requestOptions.method);
   const response = await fetch(endpoint, requestOptions);
+  const data = await parseResponseData(response);
+  validateResponse(response, data);
+  return data;
+}
+
+/**
+ * Logs request start for browser diagnostics.
+ */
+function logSendStart(endpoint, method) {
+  console.info("[Contact Form] Sending request", { endpoint, method });
+}
+
+/**
+ * Parses JSON response data when available.
+ */
+async function parseResponseData(response) {
   const contentType = response.headers.get("content-type") || "";
-  const isJson = contentType.includes("application/json");
-  const data = isJson ? await safeParseJson(response) : null;
-  if (!response.ok) {
-    const apiError = isJson && data && typeof data.error === "string" ? data.error : "Request failed";
-    const apiReason = isJson && data && typeof data.reason === "string" ? data.reason : "";
-    const traceId = isJson && data && typeof data.traceId === "string" ? data.traceId : "";
-    const reasonSuffix = apiReason ? ` | reason: ${apiReason}` : "";
-    const traceSuffix = traceId ? ` | traceId: ${traceId}` : "";
-    throw new Error(`${apiError} (status ${response.status})${reasonSuffix}${traceSuffix}`);
+  if (!contentType.includes("application/json")) {
+    return null;
   }
-  if (isJson && data && data.success !== true) {
+  return safeParseJson(response);
+}
+
+/**
+ * Validates API response payload and status.
+ */
+function validateResponse(response, data) {
+  if (!response.ok) {
+    throw new Error(getResponseError(response.status, data));
+  }
+  if (data && data.success !== true) {
     throw new Error("Request failed: success flag missing");
   }
+}
+
+/**
+ * Builds detailed response error text.
+ */
+function getResponseError(status, data) {
+  const apiError = typeof data?.error === "string" ? data.error : "Request failed";
+  const apiReason = typeof data?.reason === "string" ? data.reason : "";
+  const traceId = typeof data?.traceId === "string" ? data.traceId : "";
+  const reasonSuffix = apiReason ? ` | reason: ${apiReason}` : "";
+  const traceSuffix = traceId ? ` | traceId: ${traceId}` : "";
+  return `${apiError} (status ${status})${reasonSuffix}${traceSuffix}`;
 }
 
 /**
@@ -627,9 +659,12 @@ function setSubmitDisabled(button, disabled) {
 /**
  * Handles submit success state.
  */
-function onSubmitSuccess(form, statusElement) {
+function onSubmitSuccess(form, statusElement, result) {
   form.reset();
   setStatus(statusElement, getTranslation("form.status.success"), "success");
+  console.info("[Contact Form] Send succeeded", {
+    traceId: typeof result?.traceId === "string" ? result.traceId : ""
+  });
 }
 
 /**

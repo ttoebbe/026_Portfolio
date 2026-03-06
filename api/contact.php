@@ -17,7 +17,8 @@ if (isset($_SERVER["HTTP_ORIGIN"]) && in_array($_SERVER["HTTP_ORIGIN"], $allowed
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-$siteEmail = getenv("CONTACT_RECIPIENT_EMAIL") ?: "toebbe.thomas@outlook.de";
+$recipientEmail = getConfiguredEmail("CONTACT_RECIPIENT_EMAIL", "toebbe.thomas@outlook.de");
+$senderEmail = getConfiguredEmail("CONTACT_SENDER_EMAIL", "kontakt@thomas-toebbe.de");
 $traceId = bin2hex(random_bytes(8));
 header("X-Contact-Trace-Id: {$traceId}");
 logContactEvent($traceId, "request_received", [
@@ -36,8 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     respond(405, ["success" => false, "error" => "Method not allowed", "traceId" => $traceId]);
 }
 
-if (!filter_var($siteEmail, FILTER_VALIDATE_EMAIL)) {
-    logContactEvent($traceId, "invalid_server_mail_config", ["site_email" => $siteEmail]);
+if (!hasValidServerMailConfig($recipientEmail, $senderEmail)) {
+    logContactEvent($traceId, "invalid_server_mail_config", [
+        "recipient_email" => $recipientEmail,
+        "sender_email" => $senderEmail,
+    ]);
     respond(500, ["success" => false, "error" => "Server mail configuration invalid", "traceId" => $traceId]);
 }
 
@@ -92,12 +96,13 @@ $mailBody = "
 $headers = [];
 $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-type: text/html; charset=utf-8";
-$headers[] = "From: Website Kontakt <{$siteEmail}>";
+$headers[] = "From: Website Kontakt <{$senderEmail}>";
 $headers[] = "Reply-To: {$replyTo}";
-$headers[] = "Return-Path: {$siteEmail}";
+$headers[] = "Return-Path: {$senderEmail}";
 
 logContactEvent($traceId, "mail_attempt", [
-    "recipient" => $siteEmail,
+    "recipient" => $recipientEmail,
+    "sender" => $senderEmail,
     "reply_to" => $replyTo,
 ]);
 
@@ -109,11 +114,11 @@ set_error_handler(static function (int $severity, string $message) use (&$mailWa
 error_clear_last();
 
 $success = mail(
-    $siteEmail,
+    $recipientEmail,
     $subject,
     $mailBody,
     implode("\r\n", $headers),
-    "-f {$siteEmail}"
+    "-f {$senderEmail}"
 );
 
 restore_error_handler();
@@ -136,6 +141,17 @@ respond(200, ["success" => true, "traceId" => $traceId]);
 function sanitizeHeaderValue(string $value): string
 {
     return str_replace(["\r", "\n"], "", $value);
+}
+
+function getConfiguredEmail(string $envName, string $fallback): string
+{
+    return trim((string)(getenv($envName) ?: $fallback));
+}
+
+function hasValidServerMailConfig(string $recipientEmail, string $senderEmail): bool
+{
+    return (bool)filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)
+        && (bool)filter_var($senderEmail, FILTER_VALIDATE_EMAIL);
 }
 
 function respond(int $statusCode, array $payload): void
