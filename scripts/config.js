@@ -7,7 +7,7 @@ window.PORTFOLIO_CONFIG = {
     phone: "+49 1590 6016848"
   },
   form: {
-    endpoint: "https://example.invalid/form-endpoint",
+    endpoint: "/api/contact.php",
     method: "POST",
     sendFormat: "json"
   }
