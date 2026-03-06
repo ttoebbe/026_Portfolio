@@ -596,8 +596,10 @@ async function sendRequest(endpoint, requestOptions) {
   if (!response.ok) {
     const apiError = isJson && data && typeof data.error === "string" ? data.error : "Request failed";
     const apiReason = isJson && data && typeof data.reason === "string" ? data.reason : "";
+    const traceId = isJson && data && typeof data.traceId === "string" ? data.traceId : "";
     const reasonSuffix = apiReason ? ` | reason: ${apiReason}` : "";
-    throw new Error(`${apiError} (status ${response.status})${reasonSuffix}`);
+    const traceSuffix = traceId ? ` | traceId: ${traceId}` : "";
+    throw new Error(`${apiError} (status ${response.status})${reasonSuffix}${traceSuffix}`);
   }
   if (isJson && data && data.success !== true) {
     throw new Error("Request failed: success flag missing");
