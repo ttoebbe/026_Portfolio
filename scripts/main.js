@@ -463,6 +463,7 @@ function buildPayload(formData) {
     name: getInputValue(formData, "name"),
     email: getInputValue(formData, "email"),
     message: getInputValue(formData, "message"),
+    website: getInputValue(formData, "website"),
     privacyAccepted: formData.get("privacy-accepted") === "on",
     language: currentLanguage
   };

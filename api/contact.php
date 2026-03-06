@@ -21,11 +21,6 @@ $recipientEmail = getConfiguredEmail("CONTACT_RECIPIENT_EMAIL", "toebbe.thomas@o
 $senderEmail = getConfiguredEmail("CONTACT_SENDER_EMAIL", "kontakt@thomas-toebbe.de");
 $traceId = bin2hex(random_bytes(8));
 header("X-Contact-Trace-Id: {$traceId}");
-logContactEvent($traceId, "request_received", [
-    "method" => $_SERVER["REQUEST_METHOD"] ?? "unknown",
-    "origin" => $_SERVER["HTTP_ORIGIN"] ?? "unknown",
-    "remote_addr" => $_SERVER["REMOTE_ADDR"] ?? "unknown",
-]);
 
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
     http_response_code(204);
@@ -45,6 +40,12 @@ if (!hasValidServerMailConfig($recipientEmail, $senderEmail)) {
     respond(500, ["success" => false, "error" => "Server mail configuration invalid", "traceId" => $traceId]);
 }
 
+$clientIp = trim((string)($_SERVER["REMOTE_ADDR"] ?? "unknown"));
+if (!isWithinRateLimit($clientIp, 10, 3600)) {
+    logContactEvent($traceId, "rate_limit_exceeded", ["remote_addr" => $clientIp]);
+    respond(429, ["success" => false, "error" => "Too many requests", "traceId" => $traceId]);
+}
+
 $rawBody = file_get_contents("php://input");
 if ($rawBody === false) {
     logContactEvent($traceId, "invalid_request_body", []);
@@ -55,6 +56,12 @@ $params = json_decode($rawBody, true);
 if (!is_array($params) || json_last_error() !== JSON_ERROR_NONE) {
     logContactEvent($traceId, "invalid_json", ["json_error" => json_last_error_msg()]);
     respond(400, ["success" => false, "error" => "Invalid JSON", "traceId" => $traceId]);
+}
+
+$honeypot = trim((string)($params["website"] ?? ""));
+if ($honeypot !== "") {
+    logContactEvent($traceId, "honeypot_triggered", ["length" => mb_strlen($honeypot)]);
+    respond(400, ["success" => false, "error" => "Invalid submission", "traceId" => $traceId]);
 }
 
 $email = trim((string)($params["email"] ?? ""));
@@ -100,12 +107,6 @@ $headers[] = "From: Website Kontakt <{$senderEmail}>";
 $headers[] = "Reply-To: {$replyTo}";
 $headers[] = "Return-Path: {$senderEmail}";
 
-logContactEvent($traceId, "mail_attempt", [
-    "recipient" => $recipientEmail,
-    "sender" => $senderEmail,
-    "reply_to" => $replyTo,
-]);
-
 $mailWarning = null;
 set_error_handler(static function (int $severity, string $message) use (&$mailWarning): bool {
     $mailWarning = $message;
@@ -135,7 +136,6 @@ if (!$success) {
     respond(500, ["success" => false, "error" => "Mail delivery failed", "reason" => $reason, "traceId" => $traceId]);
 }
 
-logContactEvent($traceId, "mail_success", []);
 respond(200, ["success" => true, "traceId" => $traceId]);
 
 function sanitizeHeaderValue(string $value): string
@@ -161,8 +161,86 @@ function respond(int $statusCode, array $payload): void
     exit;
 }
 
+function isWithinRateLimit(string $clientIp, int $maxRequests, int $windowSeconds): bool
+{
+    $storageFile = __DIR__ . "/.contact-rate-limit.json";
+    $now = time();
+
+    $handle = @fopen($storageFile, "c+");
+    if ($handle === false) {
+        return true;
+    }
+
+    if (!flock($handle, LOCK_EX)) {
+        fclose($handle);
+        return true;
+    }
+
+    $currentData = stream_get_contents($handle);
+    $state = [];
+    if (is_string($currentData) && $currentData !== "") {
+        $decoded = json_decode($currentData, true);
+        if (is_array($decoded)) {
+            $state = $decoded;
+        }
+    }
+
+    $updatedState = [];
+    foreach ($state as $ip => $timestamps) {
+        if (!is_string($ip) || !is_array($timestamps)) {
+            continue;
+        }
+
+        $recentTimestamps = [];
+        foreach ($timestamps as $timestamp) {
+            if (is_int($timestamp) && ($now - $timestamp) < $windowSeconds) {
+                $recentTimestamps[] = $timestamp;
+            }
+        }
+
+        if ($recentTimestamps !== []) {
+            $updatedState[$ip] = $recentTimestamps;
+        }
+    }
+
+    $recentForClient = $updatedState[$clientIp] ?? [];
+    if (count($recentForClient) >= $maxRequests) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        return false;
+    }
+
+    $recentForClient[] = $now;
+    $updatedState[$clientIp] = $recentForClient;
+
+    rewind($handle);
+    ftruncate($handle, 0);
+    fwrite($handle, json_encode($updatedState, JSON_UNESCAPED_UNICODE));
+    fflush($handle);
+    flock($handle, LOCK_UN);
+    fclose($handle);
+
+    return true;
+}
+
 function logContactEvent(string $traceId, string $event, array $context): void
 {
+    $loggableEvents = [
+        "invalid_method",
+        "invalid_server_mail_config",
+        "invalid_request_body",
+        "invalid_json",
+        "invalid_input",
+        "input_too_long",
+        "rate_limit_exceeded",
+        "honeypot_triggered",
+        "mail_failed",
+    ];
+
+    if (!in_array($event, $loggableEvents, true)) {
+        return;
+    }
+
     $record = [
         "timestamp" => gmdate("c"),
         "traceId" => $traceId,
