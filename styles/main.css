@@ -771,6 +771,13 @@ h3 {
   box-shadow: 0 0 16px color-mix(in srgb, var(--accent-cyan) 35%, transparent);
 }
 
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 .btn-secondary {
   background: transparent;
   color: var(--accent-orange);
@@ -974,6 +981,14 @@ h3 {
 #contact-form input::placeholder,
 #contact-form textarea::placeholder {
   color: var(--text-muted);
+}
+
+#contact-form input:-webkit-autofill,
+#contact-form input:-webkit-autofill:hover,
+#contact-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-primary);
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-main) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .checkbox-line {
