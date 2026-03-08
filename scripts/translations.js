@@ -22,7 +22,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "why.iAm": "Ich bin",
     "why.item1.title": "Standort Osnabrück/Emsland",
     "why.item1.body":
-      "Regional in Merzen verankert, bei hohem Remoteanteil auch für weiter entfernte Standorte verfügbar.",
+      "Regional in Merzen verankert, bei entsprechendem Remoteanteil auch für weiter entfernte Standorte verfügbar.",
     "why.item2.title": "Technik & Führung",
     "why.item2.body":
       "Optimale Balance zwischen technischer Expertise und koordinierender Verantwortung.",
@@ -137,7 +137,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "why.iAm": "I am",
     "why.item1.title": "Located Osnabrück/Emsland",
     "why.item1.body":
-      "Regionally based in Merzen, available for distant locations with high remote ratio.",
+      "Regionally based in Merzen, available for distant locations with remote ratio.",
     "why.item2.title": "Technology & Leadership",
     "why.item2.body":
       "Optimal balance between technical expertise and coordinating responsibility.",

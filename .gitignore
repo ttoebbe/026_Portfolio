@@ -24,6 +24,7 @@ prettierrc.json
 eslint.config.js
 package-lock.json
 package.json
+claude.md
 
 
 # Env and secrets
