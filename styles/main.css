@@ -821,19 +821,8 @@ h3 {
 
 .skill-card h3 {
   color: var(--accent-cyan);
-  font-size: 0.84rem;
+  font-size: 0.72rem;
   font-weight: var(--weight-semi);
-}
-
-.skill-card-highlight {
-  position: relative;
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-
-.challenge-image {
-  width: min(281px, 100%);
-  filter: saturate(1.08);
 }
 
 .projects .container {
