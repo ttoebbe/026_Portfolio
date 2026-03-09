@@ -26,6 +26,7 @@ package-lock.json
 package.json
 claude.md
 settings.local.json
+.playwright-mcp
 
 
 # Env and secrets
