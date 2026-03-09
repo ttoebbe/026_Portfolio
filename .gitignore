@@ -25,6 +25,7 @@ eslint.config.js
 package-lock.json
 package.json
 claude.md
+settings.local.json
 
 
 # Env and secrets
