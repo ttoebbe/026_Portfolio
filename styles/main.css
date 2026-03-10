@@ -1281,25 +1281,20 @@ textarea:focus-visible {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
-    text-align: left;
+    text-align: center;
   }
 
   .contact-rail {
-    writing-mode: horizontal-tb;
-    transform: none;
-    justify-self: start;
-    font-size: 0.72rem;
+    display: none;
   }
 
   .hero-scroll {
-    order: 3;
-    justify-self: start;
-    margin-top: 0;
+    display: none;
   }
 
   .hero-image-frame {
     order: -1;
-    justify-self: start;
+    justify-self: center;
     width: min(100%, 340px);
     height: 390px;
   }
