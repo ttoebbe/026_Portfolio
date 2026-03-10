@@ -699,7 +699,8 @@ h3 {
     width: 26px;
     height: 45px;
     background: url('../assets/img/icons/sectionWhyMe/arrow%20down.svg') center/contain no-repeat;
-    margin: var(--space-2) 0 0 auto;
+    margin: var(--space-2) auto 0 0;
+    transform: translateX(-60px);
   }
 
   /* List becomes a normal block flow */
@@ -722,17 +723,18 @@ h3 {
   }
 
   .why-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .why-item:nth-child(3):after {
     content: '';
     display: block;
     grid-column: 1 / -1;
     width: 26px;
     height: 45px;
     background: url('../assets/img/icons/sectionWhyMe/arrow%20down.svg') center/contain no-repeat;
-    margin: var(--space-2) auto 0 0;
-  }
-
-  .why-item:nth-child(2):not(:last-child)::after {
     margin: var(--space-2) 0 0 auto;
+    transform: scaleX(-1);
   }
 
   .why-item h3 {
