@@ -210,7 +210,9 @@ h3 {
   width: 100%;
   height: 2px;
   background: var(--accent-cyan);
-  transition: transform 220ms ease, opacity 220ms ease;
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
 }
 
 .menu-toggle.is-open span:nth-child(1) {
@@ -243,7 +245,9 @@ h3 {
   color: var(--accent-orange);
   padding-block: 0.4rem;
   border-bottom: 1px solid transparent;
-  transition: color 160ms ease, border-color 160ms ease;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
 }
 
 .main-nav > a:hover,
@@ -694,11 +698,11 @@ h3 {
   }
 
   .why-i-am::after {
-    content: '';
+    content: "";
     display: block;
     width: 26px;
     height: 45px;
-    background: url('../assets/img/icons/sectionWhyMe/arrow%20down.svg') center/contain no-repeat;
+    background: url("../assets/img/icons/sectionWhyMe/arrow%20down.svg") center/contain no-repeat;
     margin: var(--space-2) auto 0 0;
     transform: translateX(-60px);
   }
@@ -727,12 +731,12 @@ h3 {
   }
 
   .why-item:nth-child(3):after {
-    content: '';
+    content: "";
     display: block;
     grid-column: 1 / -1;
     width: 26px;
     height: 45px;
-    background: url('../assets/img/icons/sectionWhyMe/arrow%20down.svg') center/contain no-repeat;
+    background: url("../assets/img/icons/sectionWhyMe/arrow%20down.svg") center/contain no-repeat;
     margin: var(--space-2) 0 0 auto;
     transform: scaleX(-1);
   }
@@ -746,12 +750,16 @@ h3 {
   }
 
   .skill-card:last-child::after {
-    content: '';
+    display: none;
+  }
+
+  .skills::after {
+    content: "";
     display: block;
     width: 26px;
     height: 45px;
-    background: url('../assets/img/icons/sectionWhyMe/arrow%20down.svg') center/contain no-repeat;
-    margin: var(--space-2) auto 0;
+    background: url("../assets/img/icons/sectionWhyMe/arrow%20down.svg") center/contain no-repeat;
+    margin: var(--space-4) auto 0;
   }
 }
 
@@ -766,7 +774,10 @@ h3 {
   font-size: 0.92rem;
   font-weight: var(--weight-medium);
   cursor: pointer;
-  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
 }
 
 .btn:hover {
@@ -1191,7 +1202,9 @@ textarea:focus-visible {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 380ms ease, transform 380ms ease;
+  transition:
+    opacity 380ms ease,
+    transform 380ms ease;
 }
 
 .reveal.visible {
