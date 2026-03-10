@@ -88,9 +88,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "form.status.error": "Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.",
 
     "footer.copy": "Copyright {{year}} Thomas Többe-Hömke",
-    "footer.tagline": "digitalization & smart production",
+    "footer.tagline": "Digitalisierung, Smart Energy & Entwicklung",
     "footer.legal": "Impressum",
-    "footer.privacy": "Datenschutz",
+    "footer.privacy": "Datenschutz",  
 
     "legal.backLink": "← Zurück zum Portfolio",
     "legal.imprint.title": "Impressum",
@@ -201,7 +201,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "form.status.error": "Sending failed. Please try again later.",
 
     "footer.copy": "Copyright {{year}} Thomas Többe-Hömke",
-    "footer.tagline": "digitalization & smart production",
+    "footer.tagline": "Digitalization, Smart Energy & Development",
     "footer.legal": "Legal notice",
     "footer.privacy": "Privacy policy",
 
