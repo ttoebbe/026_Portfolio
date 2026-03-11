@@ -1148,7 +1148,7 @@ h3 {
 }
 
 .legal-content {
-  padding: calc(var(--header-h) + 1.2rem) 0 4rem;
+  padding: calc(var(--header-h) + var(--marquee-h) + 1.2rem) 0 4rem;
   min-height: 75vh;
 }
 
