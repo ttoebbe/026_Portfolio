@@ -9,6 +9,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.contact": "Kontakt",
     "nav.menu.open": "Menü öffnen",
     "nav.menu.close": "Menü schließen",
+    "marquee.label": "Projekt-Hinweis",
+    "marquee.text":
+      "Übungsprojekt im Rahmen einer Fortbildung / An meine Kollegen: Ich suche nicht :-)",
 
     "hero.available": "sprechen Sie mich gerne an",
     "hero.role": "Digitalisierung, Smart Energy & Entwicklung",
@@ -34,6 +37,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cta.talk": "Lassen Sie uns sprechen",
 
     "skills.title": "Kernkompetenzen",
+    "skills.javascript": "JavaScript",
+    "skills.html": "HTML",
+    "skills.css": "CSS",
+    "skills.restApi": "REST API",
+    "skills.firebase": "Firebase",
+    "skills.git": "Git",
+    "skills.scrum": "Scrum",
+    "skills.codesys": "CODESYS",
     "skills.challenge": "Neue Herausforderungen",
 
     "projects.title": "Meine Projekte",
@@ -124,6 +135,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.contact": "Contact",
     "nav.menu.open": "Open menu",
     "nav.menu.close": "Close menu",
+    "marquee.label": "Project notice",
+    "marquee.text":
+      "Training project as part of a professional course / To my colleagues: I am not looking :-)",
 
     "hero.available": "Feel free to reach out",
     "hero.role": "Digitalization, Smart Energy & Development",
@@ -149,6 +163,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cta.talk": "Let's talk",
 
     "skills.title": "Core Competencies",
+    "skills.javascript": "JavaScript",
+    "skills.html": "HTML",
+    "skills.css": "CSS",
+    "skills.restApi": "REST API",
+    "skills.firebase": "Firebase",
+    "skills.git": "Git",
+    "skills.scrum": "Scrum",
+    "skills.codesys": "CODESYS",
     "skills.challenge": "New Challenges",
 
     "projects.title": "My Projects",

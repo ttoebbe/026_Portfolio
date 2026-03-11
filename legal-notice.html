@@ -3,64 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Impressum - Thomas Többe-Hömke Frontend Developer Portfolio" />
+    <meta
+      name="description"
+      content="Impressum - Thomas Többe-Hömke Frontend Developer Portfolio"
+    />
     <title>Impressum - Thomas Többe-Hömke</title>
     <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon-tt.svg" />
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container">
-        <nav class="main-nav">
-          <div class="nav-left">
-            <a href="index.html" class="nav-brand">&lt;TT&gt;</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="index.html#top" class="logo" aria-label="Home">
+          <span class="logo-mark">&lt;TT&gt;</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav-panel"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <div class="header-panel" id="mobile-nav-panel">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html#why-me" data-translation="nav.why">Why me</a>
+            <a href="index.html#skills" data-translation="nav.skills">Kompetenzen</a>
+            <a href="index.html#projects" data-translation="nav.projects">Erfahrung</a>
+            <a href="index.html#contact" data-translation="nav.contact">Kontakt</a>
+          </nav>
+
+          <div class="lang-switch" aria-label="Language switch">
+            <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
           </div>
-          <div class="nav-right">
-            <div class="lang-switch" aria-label="Language switch">
-              <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
-              <span class="lang-divider">|</span>
-              <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-            </div>
-            <a href="index.html" class="back-link" data-translation="legal.backLink">← Zurück zum Portfolio</a>
-          </div>
-        </nav>
+        </div>
       </div>
     </header>
+
+    <div class="project-marquee" aria-label="Project notice">
+      <div class="project-marquee-track" aria-hidden="true">
+        <span class="project-marquee-text" data-translation="marquee.text">
+          Übungsprojekt im Rahmen einer Fortbildung / An meine Kollegen: Ich suche nicht :-)
+        </span>
+        <span class="project-marquee-text" data-translation="marquee.text">
+          Übungsprojekt im Rahmen einer Fortbildung / An meine Kollegen: Ich suche nicht :-)
+        </span>
+      </div>
+    </div>
+
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
 
     <main>
       <section class="legal-content">
         <div class="container">
           <h1 class="legal-title" data-translation="legal.imprint.title">Impressum</h1>
-          
+
           <div class="legal-section">
             <h2 data-translation="legal.imprint.tmg">Angaben gemaß Paragraph 5 TMG</h2>
-            <p>Thomas Többe-Hömke<br>
-            Westerodener Str. 33<br>
-            49586 Merzen<br>
-            Deutschland</p>
-            
+            <p>
+              Thomas Többe-Hömke<br />
+              Westerodener Str. 33<br />
+              49586 Merzen<br />
+              Deutschland
+            </p>
+
             <h2 data-translation="legal.imprint.contact">Kontakt</h2>
-            <p>Telefon: 01590 6016848<br>
-            E-Mail: toebbe.thomas@outlook.de</p>
-            
+            <p>
+              Telefon: 01590 6016848<br />
+              E-Mail: toebbe.thomas@outlook.de
+            </p>
+
             <h2 data-translation="legal.imprint.responsible">Verantwortlich fuer den Inhalt</h2>
-            <p>Thomas Többe-Hömke<br>
-            Westerodener Str. 33<br>
-            49586 Merzen</p>
-            
+            <p>
+              Thomas Többe-Hömke<br />
+              Westerodener Str. 33<br />
+              49586 Merzen
+            </p>
+
             <h2 data-translation="legal.imprint.liability">Haftungshinweis</h2>
-            <p data-translation="legal.imprint.liabilityText">Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+            <p data-translation="legal.imprint.liabilityText">
+              Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung fuer die
+              Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschließlich
+              deren Betreiber verantwortlich.
+            </p>
           </div>
         </div>
       </section>
@@ -71,18 +111,37 @@
         <div class="footer-content">
           <div class="footer-branding">
             <div class="footer-logo">&lt;TT&gt;</div>
-            <span class="footer-tagline" data-translation="footer.tagline">Digitalization, Smart Energy & Development</span>
+            <span class="footer-tagline" data-translation="footer.tagline">
+              Digitalization, Smart Energy & Development
+            </span>
           </div>
-          
+
           <div class="footer-social">
-            <a href="https://github.com/ttoebbe" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
-              <img src="assets/img/icons/github-button.svg" alt="GitHub" width="32" height="32">
+            <a
+              href="https://github.com/ttoebbe"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              class="social-link"
+            >
+              <img src="assets/img/icons/github-button.svg" alt="GitHub" width="32" height="32" />
             </a>
-            <a href="https://linkedin.com/in/ttoebbe" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
-              <img src="assets/img/icons/linkedin-button.svg" alt="LinkedIn" width="32" height="32">
+            <a
+              href="https://linkedin.com/in/ttoebbe"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="social-link"
+            >
+              <img
+                src="assets/img/icons/linkedin-button.svg"
+                alt="LinkedIn"
+                width="32"
+                height="32"
+              />
             </a>
           </div>
-          
+
           <div class="footer-legal">
             <p>Copyright 2026 Thomas Többe-Hömke</p>
             <div class="footer-links">
@@ -94,8 +153,7 @@
         </div>
       </div>
     </footer>
-    
-    <!-- Scripts -->
+
     <script src="scripts/config.js" defer></script>
     <script src="scripts/translations.js" defer></script>
     <script type="module" src="scripts/main.js"></script>
