@@ -76,9 +76,10 @@ window.PORTFOLIO_TRANSLATIONS = {
 
     "contact.title": "Kontakt",
     "contact.lead":
-      "Sie haben ein Digitalisierungsprojekt oder benötigen Expertise im Bereich Smart Production? Kontaktieren Sie mich für ein unverbindliches Gespräch.",
-    "contact.emailLabel": "E-Mail:",
-    "contact.phoneLabel": "Telefon:",
+      "Ermutigen Sie Besucher, Kontakt aufzunehmen, und beschreiben Sie, für welche Rolle Sie sich interessieren. Zeigen Sie Interesse an der Mitarbeit in einem neuen Projekt.",
+    "contact.emailLabel": "E-mail:",
+    "contact.phoneLabel": "Tel:",
+    "contact.backToTop": "Nach oben",
 
     "form.name.label": "Ihr Name",
     "form.name.placeholder": "Ihr Name",
@@ -86,8 +87,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "form.email.placeholder": "Ihre E-Mail",
     "form.message.label": "Ihre Nachricht",
     "form.message.placeholder": "Ihre Nachricht",
-    "form.privacy":
-      "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "form.privacy.prefix": "Ich habe die ",
+    "form.privacy.link": "Datenschutzerklärung",
+    "form.privacy.suffix": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "form.submit": "Senden",
 
     "form.status.required":
@@ -202,9 +204,10 @@ window.PORTFOLIO_TRANSLATIONS = {
 
     "contact.title": "Contact me",
     "contact.lead":
-      "Do you have a digitalization project or need expertise in Smart Production? Contact me for an informal discussion.",
-    "contact.emailLabel": "Email:",
-    "contact.phoneLabel": "Phone:",
+      "Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.",
+    "contact.emailLabel": "E-mail:",
+    "contact.phoneLabel": "Tel:",
+    "contact.backToTop": "Back to top",
 
     "form.name.label": "Your name",
     "form.name.placeholder": "Your name",
@@ -212,7 +215,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "form.email.placeholder": "Your email",
     "form.message.label": "Your message",
     "form.message.placeholder": "Your message",
-    "form.privacy": "I have read the privacy policy and agree to the processing of my data.",
+    "form.privacy.prefix": "I've read the ",
+    "form.privacy.link": "privacy policy",
+    "form.privacy.suffix": " and agree to the processing of my data as outlined.",
     "form.submit": "Send",
 
     "form.status.required": "Please fill in all required fields and accept the privacy policy.",

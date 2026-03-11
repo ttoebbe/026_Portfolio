@@ -466,38 +466,61 @@
       </section>
 
       <section class="section contact reveal" id="contact">
-        <div class="container">
-          <h2 data-translation="contact.title">Contact me</h2>
+        <div class="container contact-layout">
+          <div class="contact-header">
+            <h2 data-translation="contact.title">Contact me</h2>
+            <img
+              class="contact-header-arrow"
+              src="assets/img/icons/sectionContactMe/arrow right.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
 
-          <div class="contact-grid">
-            <div class="contact-copy">
-              <p data-translation="contact.lead">
-                Do you have a project in mind or need frontend support? Send me a message and we can
-                discuss details.
-              </p>
-              <p>
-                <strong data-translation="contact.emailLabel">Email:</strong>
+          <div class="contact-meta">
+            <p class="contact-lead" data-translation="contact.lead">
+              Encourage people to contact you and describe what role you are interested in. Express
+              interest in contributing to a new project.
+            </p>
+
+            <div class="contact-details">
+              <p class="contact-detail">
+                <img
+                  class="contact-detail-icon"
+                  src="assets/img/icons/sectionContactMe/%F0%9F%A6%86%20icon%20_email_.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <strong data-translation="contact.emailLabel">E-mail:</strong>
                 <a id="contact-email" href="mailto:toebbe.thomas@outlook.de"
                   >toebbe.thomas@outlook.de</a
                 >
               </p>
-              <p>
-                <strong data-translation="contact.phoneLabel">Phone:</strong>
+              <p class="contact-detail">
+                <img
+                  class="contact-detail-icon"
+                  src="assets/img/icons/sectionContactMe/%F0%9F%A6%86%20icon%20_phone_.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <strong data-translation="contact.phoneLabel">Tel:</strong>
                 <a id="contact-phone" href="tel:+491590601684">+49 1590 6016848</a>
               </p>
             </div>
+          </div>
 
-            <form id="contact-form" novalidate>
-              <input
-                id="website"
-                name="website"
-                type="text"
-                tabindex="-1"
-                autocomplete="off"
-                aria-hidden="true"
-                style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
-              />
+          <form id="contact-form" class="contact-form-layout" novalidate>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+              style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
+            />
 
+            <div class="contact-form-left">
               <label for="name" class="sr-only" data-translation="form.name.label">Your name</label>
               <input
                 id="name"
@@ -524,6 +547,27 @@
                 placeholder="Your email"
               />
 
+              <div class="consent-group">
+                <input
+                  id="privacy-accepted"
+                  name="privacy-accepted"
+                  class="consent-checkbox"
+                  type="checkbox"
+                  required
+                />
+                <label class="consent-text" for="privacy-accepted">
+                  <span data-translation="form.privacy.prefix">I've read the </span>
+                  <a href="privacy-policy.html" data-translation="form.privacy.link"
+                    >privacy policy</a
+                  >
+                  <span data-translation="form.privacy.suffix"
+                    > and agree to the processing of my data as outlined.</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <div class="contact-form-right">
               <label for="message" class="sr-only" data-translation="form.message.label"
                 >Your message</label
               >
@@ -536,31 +580,31 @@
                 data-translation-attr="placeholder"
                 placeholder="Your message"
               ></textarea>
+            </div>
 
-              <label class="checkbox-line" for="privacy-accepted">
-                <input id="privacy-accepted" name="privacy-accepted" type="checkbox" required />
-                <span data-translation="form.privacy"
-                  >I have read the privacy policy and agree to the processing of my data.</span
-                >
-              </label>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 
-              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
-
-              <button
-                type="submit"
-                class="btn btn-primary full"
-                id="submit-btn"
-                data-translation="form.submit"
-              >
+            <div class="contact-actions">
+              <button type="submit" class="btn btn-contact" id="submit-btn" data-translation="form.submit">
                 Send
               </button>
-            </form>
-          </div>
+            </div>
+          </form>
+
+          <a
+            class="contact-up-arrow"
+            href="#top"
+            aria-label="Back to top"
+            data-translation="contact.backToTop"
+            data-translation-attr="aria-label"
+          >
+            <img src="assets/img/icons/sectionContactMe/arrow up.svg" alt="" aria-hidden="true" />
+          </a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer home-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-branding">
@@ -568,32 +612,6 @@
             <span class="footer-tagline" data-translation="footer.tagline"
               >Digitalization, Smart Energy & Development</span
             >
-          </div>
-
-          <div class="footer-social">
-            <a
-              href="https://github.com/ttoebbe"
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub"
-              class="social-link"
-            >
-              <img src="assets/img/icons/github-button.svg" alt="GitHub" width="32" height="32" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/thomas-t%C3%B6bbe-a14317202"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-              class="social-link"
-            >
-              <img
-                src="assets/img/icons/linkedin-button.svg"
-                alt="LinkedIn"
-                width="32"
-                height="32"
-              />
-            </a>
           </div>
 
           <div class="footer-legal">
@@ -605,6 +623,35 @@
               <span class="footer-separator">|</span>
               <a href="privacy-policy.html" data-translation="footer.privacy">Privacy policy</a>
             </div>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://github.com/ttoebbe"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              class="social-link"
+            >
+              <img src="assets/img/icons/sectionFooter/gitHub.svg" alt="GitHub" width="30" height="30" />
+            </a>
+            <a href="mailto:toebbe.thomas@outlook.de" aria-label="Mail" class="social-link">
+              <img src="assets/img/icons/sectionFooter/mail.svg" alt="Mail" width="30" height="30" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/thomas-t%C3%B6bbe-a14317202"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="social-link"
+            >
+              <img
+                src="assets/img/icons/sectionFooter/linkedIn.svg"
+                alt="LinkedIn"
+                width="30"
+                height="30"
+              />
+            </a>
           </div>
         </div>
       </div>
