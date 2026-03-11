@@ -1316,7 +1316,7 @@ textarea:focus-visible {
   }
 
   .testimonial-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .footer-content {
