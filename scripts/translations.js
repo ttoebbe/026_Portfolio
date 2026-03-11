@@ -37,6 +37,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cta.talk": "Lassen Sie uns sprechen",
 
     "skills.title": "Kernkompetenzen",
+    "skills.javascript": "JavaScript",
+    "skills.html": "HTML",
+    "skills.css": "CSS",
+    "skills.restApi": "REST API",
+    "skills.firebase": "Firebase",
+    "skills.git": "Git",
+    "skills.scrum": "Scrum",
+    "skills.codesys": "CODESYS",
     "skills.challenge": "Neue Herausforderungen",
 
     "projects.title": "Meine Projekte",
@@ -155,6 +163,14 @@ window.PORTFOLIO_TRANSLATIONS = {
     "cta.talk": "Let's talk",
 
     "skills.title": "Core Competencies",
+    "skills.javascript": "JavaScript",
+    "skills.html": "HTML",
+    "skills.css": "CSS",
+    "skills.restApi": "REST API",
+    "skills.firebase": "Firebase",
+    "skills.git": "Git",
+    "skills.scrum": "Scrum",
+    "skills.codesys": "CODESYS",
     "skills.challenge": "New Challenges",
 
     "projects.title": "My Projects",
