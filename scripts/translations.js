@@ -9,6 +9,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.contact": "Kontakt",
     "nav.menu.open": "Menü öffnen",
     "nav.menu.close": "Menü schließen",
+    "marquee.label": "Projekt-Hinweis",
+    "marquee.text":
+      "Übungsprojekt im Rahmen einer Fortbildung / An meine Kollegen: Ich suche nicht :-)",
 
     "hero.available": "sprechen Sie mich gerne an",
     "hero.role": "Digitalisierung, Smart Energy & Entwicklung",
@@ -124,6 +127,9 @@ window.PORTFOLIO_TRANSLATIONS = {
     "nav.contact": "Contact",
     "nav.menu.open": "Open menu",
     "nav.menu.close": "Close menu",
+    "marquee.label": "Project notice",
+    "marquee.text":
+      "Training project as part of a professional course / To my colleagues: I am not looking :-)",
 
     "hero.available": "Feel free to reach out",
     "hero.role": "Digitalization, Smart Energy & Development",
