@@ -1,6 +1,8 @@
 import { getTranslation, getCurrentLanguage } from "./language.js";
 
 const portfolioConfig = window.PORTFOLIO_CONFIG || {};
+const FIELD_ORDER = ["name", "email", "message", "privacy-accepted"];
+const TEXT_FIELD_IDS = ["name", "email", "message"];
 
 /**
  * Sets form feedback status.
@@ -14,81 +16,204 @@ function setStatus(element, message, type) {
 }
 
 /**
- * Initializes contact form with blur validation and submit handling.
+ * Initializes contact form with persistent validation.
  */
 export function initContactForm() {
   const form = document.getElementById("contact-form");
   const submitButton = document.getElementById("submit-btn");
   const statusElement = document.getElementById("form-status");
+  const validationState = createValidationState();
   if (!form || !submitButton || !statusElement) {
     return;
   }
-  submitButton.disabled = true;
-  addFieldValidationListeners(form, submitButton, statusElement);
+  clearFieldStates();
+  updateSubmitState(form, submitButton);
+  addFieldValidationListeners(form, submitButton, statusElement, validationState);
   form.addEventListener("submit", (event) => {
-    onContactSubmit(event, form, submitButton, statusElement);
+    onContactSubmit(event, form, submitButton, statusElement, validationState);
   });
 }
 
 /**
- * Adds blur and change listeners for field validation.
+ * Creates empty validation state object.
  */
-function addFieldValidationListeners(form, submitButton, statusElement) {
-  ["name", "email", "message"].forEach((id) => {
-    document.getElementById(id)?.addEventListener("blur", () => {
-      validateFieldOnBlur(id, statusElement);
-      updateSubmitState(form, submitButton);
-    });
+function createValidationState() {
+  return Object.fromEntries(FIELD_ORDER.map((fieldId) => [fieldId, null]));
+}
+
+/**
+ * Adds listeners for all form fields.
+ */
+function addFieldValidationListeners(form, submitButton, statusElement, validationState) {
+  TEXT_FIELD_IDS.forEach((fieldId) => {
+    addTextFieldListeners(form, fieldId, submitButton, statusElement, validationState);
   });
-  document.getElementById("privacy-accepted")?.addEventListener("change", () => {
-    updateSubmitState(form, submitButton);
+  addCheckboxListener(form, submitButton, statusElement, validationState);
+}
+
+/**
+ * Adds blur and input listeners to one text field.
+ */
+function addTextFieldListeners(form, fieldId, submitButton, statusElement, validationState) {
+  const field = document.getElementById(fieldId);
+  field?.addEventListener("blur", () => onFieldBlur(form, fieldId, submitButton, statusElement, validationState));
+  field?.addEventListener("input", () => onFieldInput(form, fieldId, submitButton, statusElement, validationState));
+}
+
+/**
+ * Adds change listener to privacy checkbox.
+ */
+function addCheckboxListener(form, submitButton, statusElement, validationState) {
+  const checkbox = document.getElementById("privacy-accepted");
+  checkbox?.addEventListener("change", () => {
+    onFieldBlur(form, "privacy-accepted", submitButton, statusElement, validationState);
   });
 }
 
 /**
- * Validates a single field on blur and shows status if invalid.
+ * Validates one field after blur or change.
  */
-function validateFieldOnBlur(fieldId, statusElement) {
-  const value = document.getElementById(fieldId)?.value.trim() || "";
-  const errorKey = getFieldError(fieldId, value);
-  if (errorKey) {
-    setStatus(statusElement, getTranslation(errorKey), "error");
-  } else {
-    setStatus(statusElement, "", "");
+function onFieldBlur(form, fieldId, submitButton, statusElement, validationState) {
+  validateSingleField(form, fieldId, validationState, statusElement);
+  updateSubmitState(form, submitButton);
+}
+
+/**
+ * Revalidates only fields that already have an error.
+ */
+function onFieldInput(form, fieldId, submitButton, statusElement, validationState) {
+  if (validationState[fieldId]) {
+    validateSingleField(form, fieldId, validationState, statusElement);
   }
+  updateSubmitState(form, submitButton);
 }
 
 /**
- * Returns translation key for field error or null if valid.
+ * Validates one field and re-renders status.
  */
-function getFieldError(fieldId, value) {
+function validateSingleField(form, fieldId, validationState, statusElement) {
+  const errorKey = getFieldError(fieldId, new FormData(form));
+  validationState[fieldId] = errorKey;
+  applyFieldState(fieldId, errorKey);
+  renderValidationStatus(statusElement, validationState);
+  return !errorKey;
+}
+
+/**
+ * Validates all form fields.
+ */
+function validateAllFields(form, validationState, statusElement) {
+  const formData = new FormData(form);
+  FIELD_ORDER.forEach((fieldId) => {
+    validationState[fieldId] = getFieldError(fieldId, formData);
+    applyFieldState(fieldId, validationState[fieldId]);
+  });
+  renderValidationStatus(statusElement, validationState);
+  return hasNoValidationErrors(validationState);
+}
+
+/**
+ * Returns translation key for one field error.
+ */
+function getFieldError(fieldId, formData) {
+  const value = getFieldValue(formData, fieldId);
+  if (fieldId === "privacy-accepted") return value ? null : "form.status.required";
   if (!value) return "form.status.required";
   if (fieldId === "email" && !hasValidEmail(value)) return "form.status.invalidEmail";
   return null;
 }
 
 /**
- * Enables submit button only when all required fields are valid.
+ * Returns normalized field value from form data.
+ */
+function getFieldValue(formData, fieldId) {
+  if (fieldId === "privacy-accepted") return formData.get(fieldId) === "on";
+  return getInputValue(formData, fieldId);
+}
+
+/**
+ * Applies error state to one field.
+ */
+function applyFieldState(fieldId, errorKey) {
+  const field = document.getElementById(fieldId);
+  if (!field) return;
+  field.classList.toggle("is-invalid", Boolean(errorKey));
+  updateAriaInvalid(field, errorKey);
+  toggleConsentError(field, errorKey);
+}
+
+/**
+ * Updates aria-invalid attribute on one element.
+ */
+function updateAriaInvalid(field, errorKey) {
+  if (errorKey) return field.setAttribute("aria-invalid", "true");
+  field.removeAttribute("aria-invalid");
+}
+
+/**
+ * Toggles consent-group error state.
+ */
+function toggleConsentError(field, errorKey) {
+  field.closest(".consent-group")?.classList.toggle("is-invalid", Boolean(errorKey));
+}
+
+/**
+ * Clears all field error states.
+ */
+function clearFieldStates() {
+  FIELD_ORDER.forEach((fieldId) => applyFieldState(fieldId, null));
+}
+
+/**
+ * Renders the highest-priority active error.
+ */
+function renderValidationStatus(statusElement, validationState) {
+  const errorKey = getFirstErrorKey(validationState);
+  setStatus(statusElement, errorKey ? getTranslation(errorKey) : "", errorKey ? "error" : "");
+}
+
+/**
+ * Returns first active error by field order.
+ */
+function getFirstErrorKey(validationState) {
+  return FIELD_ORDER.map((fieldId) => validationState[fieldId]).find(Boolean) || null;
+}
+
+/**
+ * Checks whether all fields are valid.
+ */
+function hasNoValidationErrors(validationState) {
+  return !Object.values(validationState).some(Boolean);
+}
+
+/**
+ * Enables submit button only when form data is valid.
  */
 function updateSubmitState(form, submitButton) {
-  const payload = buildPayload(new FormData(form));
-  submitButton.disabled = !hasRequiredFields(payload) || !hasValidEmail(payload.email);
+  submitButton.disabled = !isFormValid(new FormData(form));
+}
+
+/**
+ * Checks whether current form data is valid.
+ */
+function isFormValid(formData) {
+  return FIELD_ORDER.every((fieldId) => !getFieldError(fieldId, formData));
 }
 
 /**
  * Handles contact form submission.
  */
-async function onContactSubmit(event, form, submitButton, statusElement) {
+async function onContactSubmit(event, form, submitButton, statusElement, validationState) {
   event.preventDefault();
   const payload = buildPayload(new FormData(form));
   const endpoint = getEndpoint();
-  if (!validatePayload(payload, statusElement)) {
+  if (!validateAllFields(form, validationState, statusElement)) {
     return;
   }
   if (!validateEndpoint(endpoint, statusElement)) {
     return;
   }
-  await submitContact(form, submitButton, statusElement, endpoint, payload);
+  await submitContact(form, submitButton, statusElement, endpoint, payload, validationState);
 }
 
 /**
@@ -110,28 +235,6 @@ function buildPayload(formData) {
  */
 function getInputValue(formData, key) {
   return String(formData.get(key) || "").trim();
-}
-
-/**
- * Validates payload fields and email format.
- */
-function validatePayload(payload, statusElement) {
-  if (!hasRequiredFields(payload)) {
-    setStatus(statusElement, getTranslation("form.status.required"), "error");
-    return false;
-  }
-  if (!hasValidEmail(payload.email)) {
-    setStatus(statusElement, getTranslation("form.status.invalidEmail"), "error");
-    return false;
-  }
-  return true;
-}
-
-/**
- * Checks all required payload values.
- */
-function hasRequiredFields(payload) {
-  return Boolean(payload.name && payload.email && payload.message && payload.privacyAccepted);
 }
 
 /**
@@ -162,7 +265,7 @@ function validateEndpoint(endpoint, statusElement) {
 /**
  * Sends contact request and updates UI state.
  */
-async function submitContact(form, submitButton, statusElement, endpoint, payload) {
+async function submitContact(form, submitButton, statusElement, endpoint, payload, validationState) {
   const method = getRequestMethod();
   const sendFormat = getSendFormat();
   const requestOptions = buildRequestOptions(payload, method, sendFormat);
@@ -170,11 +273,11 @@ async function submitContact(form, submitButton, statusElement, endpoint, payloa
   setStatus(statusElement, getTranslation("form.status.sending"));
   try {
     const result = await sendRequest(endpoint, requestOptions);
-    onSubmitSuccess(form, statusElement, result);
+    onSubmitSuccess(form, statusElement, result, validationState);
   } catch (error) {
     onSubmitError(statusElement, error, endpoint, method);
   }
-  setSubmitDisabled(submitButton, false);
+  updateSubmitState(form, submitButton);
 }
 
 /**
@@ -296,11 +399,22 @@ function setSubmitDisabled(button, disabled) {
 /**
  * Handles submit success state.
  */
-function onSubmitSuccess(form, statusElement, result) {
+function onSubmitSuccess(form, statusElement, result, validationState) {
   form.reset();
+  resetValidationState(validationState);
+  clearFieldStates();
   setStatus(statusElement, getTranslation("form.status.success"), "success");
   console.info("[Contact Form] Send succeeded", {
     traceId: typeof result?.traceId === "string" ? result.traceId : ""
+  });
+}
+
+/**
+ * Resets validation state object.
+ */
+function resetValidationState(validationState) {
+  FIELD_ORDER.forEach((fieldId) => {
+    validationState[fieldId] = null;
   });
 }
 

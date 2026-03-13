@@ -1062,6 +1062,14 @@ h3 {
   resize: none;
 }
 
+#contact-form input.is-invalid:not([type="checkbox"]),
+#contact-form textarea.is-invalid,
+#contact-form input[aria-invalid="true"]:not([type="checkbox"]),
+#contact-form textarea[aria-invalid="true"] {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-orange) 35%, transparent);
+}
+
 #contact-form input::placeholder,
 #contact-form textarea::placeholder {
   color: color-mix(in srgb, var(--accent-cyan) 80%, transparent);
@@ -1092,6 +1100,12 @@ h3 {
   cursor: pointer;
 }
 
+.consent-checkbox.is-invalid,
+.consent-checkbox[aria-invalid="true"] {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-orange) 35%, transparent);
+}
+
 .consent-checkbox:focus-visible {
   outline: 1px solid color-mix(in srgb, var(--accent-cyan) 75%, transparent);
   outline-offset: 1px;
@@ -1107,6 +1121,10 @@ h3 {
   font-size: 0.62rem;
   line-height: 1.2;
   font-weight: var(--weight-regular);
+}
+
+.consent-group.is-invalid .consent-text {
+  color: var(--accent-orange);
 }
 
 .consent-text a {
