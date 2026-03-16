@@ -263,20 +263,35 @@ function validateEndpoint(endpoint, statusElement) {
 }
 
 /**
- * Sends contact request and updates UI state.
+ * Prepares submit request and sets initial UI state.
  */
-async function submitContact(form, submitButton, statusElement, endpoint, payload, validationState) {
+function prepareSubmitRequest(submitButton, statusElement, payload) {
   const method = getRequestMethod();
   const sendFormat = getSendFormat();
   const requestOptions = buildRequestOptions(payload, method, sendFormat);
   setSubmitDisabled(submitButton, true);
   setStatus(statusElement, getTranslation("form.status.sending"));
+  return { method, sendFormat, requestOptions };
+}
+
+/**
+ * Executes submit request and handles response.
+ */
+async function executeSubmitRequest(form, statusElement, endpoint, requestOptions, validationState, method) {
   try {
     const result = await sendRequest(endpoint, requestOptions);
     onSubmitSuccess(form, statusElement, result, validationState);
   } catch (error) {
     onSubmitError(statusElement, error, endpoint, method);
   }
+}
+
+/**
+ * Sends contact request and updates UI state.
+ */
+async function submitContact(form, submitButton, statusElement, endpoint, payload, validationState) {
+  const { method, requestOptions } = prepareSubmitRequest(submitButton, statusElement, payload);
+  await executeSubmitRequest(form, statusElement, endpoint, requestOptions, validationState, method);
   updateSubmitState(form, submitButton);
 }
 
