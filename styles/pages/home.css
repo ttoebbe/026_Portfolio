@@ -18,6 +18,28 @@
 }
 
 /* ==========================================================================
+   MEDIA QUERIES - RESPONSIVE FIX FOR HORIZONTAL SCROLL
+   ========================================================================== */
+@media (max-width: 1125px) and (min-width: 1101px) {
+  /* Fix horizontal overflow in 1100-1125px range by adjusting left positions */
+  .why-item-3 {
+    left: 700px; /* reduced from 730px */
+  }
+  
+  .why-cta {
+    left: 760px; /* reduced from 790px */
+  }
+  
+  .why-arrow-2 {
+    left: 780px; /* reduced from 810px */  
+  }
+  
+  .why-arrow-3 {
+    left: 870px; /* reduced from 900px */
+  }
+}
+
+/* ==========================================================================
    MEDIA QUERIES - TABLET + MOBILE LAYOUT CHANGES
    ========================================================================== */
 @media (max-width: 1100px) {
