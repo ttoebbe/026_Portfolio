@@ -1,0 +1,80 @@
+/**
+ * Button Components
+ * Contains all button styles and variants
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  min-height: 46px;
+  min-width: 136px;
+  padding: 0.62rem 1.05rem;
+  font-size: 0.92rem;
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: var(--bg-main);
+}
+
+.btn-primary:hover {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent-cyan) 35%, transparent);
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-orange);
+  border-color: color-mix(in srgb, var(--accent-cyan) 62%, transparent);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--accent-cyan) 12%, transparent);
+  color: var(--text-primary);
+}
+
+.btn-contact {
+  min-height: 30px;
+  min-width: 72px;
+  border: 1px solid color-mix(in srgb, var(--text-primary) 20%, transparent);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: var(--weight-regular);
+  padding: 0.38rem 0.78rem;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-contact:hover {
+  background: color-mix(in srgb, var(--text-primary) 6%, transparent);
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-contact:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

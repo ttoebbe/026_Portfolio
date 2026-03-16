@@ -1,0 +1,37 @@
+/**
+ * Grid and Layout Utilities
+ * Contains container, sections, and layout helper classes
+ */
+.container {
+  width: min(var(--container), calc(100% - 2.4rem));
+  margin-inline: auto;
+}
+
+#main-content {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-7);
+}
+
+/* Utility classes */
+.full {
+  width: 100%;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 380ms ease,
+    transform 380ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
