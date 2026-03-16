@@ -1,7 +1,7 @@
 import { getTranslation, applyTranslations, initLanguageSwitch } from "./language.js";
 import { initMobileMenu, initSmoothScroll, initActiveNavigation } from "./navigation.js";
 import { initRevealObserver } from "./reveal.js";
-import { initContactForm } from "./contact.js";
+import { initContactForm } from "./contact-form.js";
 
 const portfolioConfig = window.PORTFOLIO_CONFIG || {};
 
