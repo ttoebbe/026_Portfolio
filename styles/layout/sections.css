@@ -29,7 +29,7 @@
   color: var(--accent-orange);
   border: 1px solid color-mix(in srgb, var(--accent-cyan) 62%, transparent);
   padding: 0.9rem 0.45rem;
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: var(--weight-medium);
 }
 
@@ -70,7 +70,7 @@
 
 .scroll-hint {
   color: var(--accent-orange);
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-align: center;
 }

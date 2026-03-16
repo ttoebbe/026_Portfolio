@@ -104,7 +104,7 @@
 
 .consent-text {
   color: var(--accent-cyan);
-  font-size: 0.62rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   font-weight: var(--weight-regular);
 }
@@ -121,7 +121,7 @@
 .form-status {
   grid-column: 1 / -1;
   min-height: 1rem;
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: var(--weight-regular);
 }
 
