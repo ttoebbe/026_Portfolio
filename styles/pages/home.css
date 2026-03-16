@@ -375,7 +375,7 @@
     display: block;
     width: 26px;
     height: 45px;
-    background: url("../assets/img/icons/sectionWhyMe/arrow%20down.svg") center/contain no-repeat;
+    background: url("../assets/img/icons/sectionWhyMe/arrowDown.svg") center/contain no-repeat;
     margin: var(--space-2) auto 0 0;
     transform: translateX(-60px);
   }
@@ -409,7 +409,7 @@
     grid-column: 1 / -1;
     width: 26px;
     height: 45px;
-    background: url("../assets/img/icons/sectionWhyMe/arrow%20down.svg") center/contain no-repeat;
+    background: url("../assets/img/icons/sectionWhyMe/arrowDown.svg") center/contain no-repeat;
     margin: var(--space-2) 0 0 auto;
     transform: scaleX(-1);
   }
@@ -431,7 +431,7 @@
     display: block;
     width: 26px;
     height: 45px;
-    background: url("../assets/img/icons/sectionWhyMe/arrow%20down.svg") center/contain no-repeat;
+    background: url("../assets/img/icons/sectionWhyMe/arrowDown.svg") center/contain no-repeat;
     margin: var(--space-4) auto 0;
   }
 }

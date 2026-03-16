@@ -401,7 +401,7 @@
 .testimonials-arrow {
   width: 26px;
   height: 45px;
-  background: url("../../assets/img/icons/sectionMyProjects/arrow%20down.svg") center/contain no-repeat;
+  background: url("../../assets/img/icons/sectionMyProjects/arrowDown.svg") center/contain no-repeat;
   margin-top: var(--space-2);
 }
 
