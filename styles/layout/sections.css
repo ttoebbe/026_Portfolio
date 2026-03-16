@@ -126,9 +126,12 @@
 }
 
 .skills h2,
-.projects h2,
-.testimonials h2 {
+.projects h2 {
   text-align: center;
+}
+
+.testimonials h2 {
+  text-align: left;
 }
 
 .why-lead {
@@ -373,16 +376,44 @@
 /* ==========================================================================
    TESTIMONIALS SECTION
    ========================================================================== */
-.testimonial-grid {
-  margin-top: var(--space-4);
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.testimonials-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials h2 {
+  margin-bottom: 0;
+}
+
+.testimonials-content {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: auto 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.testimonials-arrow {
+  width: 26px;
+  height: 45px;
+  background: url("../../assets/img/icons/sectionMyProjects/arrow%20down.svg") center/contain no-repeat;
+  margin-top: var(--space-2);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4);
 }
 
 .testimonial-card {
-  border: 1px solid color-mix(in srgb, var(--accent-orange) 50%, transparent);
-  background: var(--bg-surface-soft);
+  border: none;
+  background: transparent;
   padding: var(--space-3) var(--space-4);
   min-height: 220px;
 }
@@ -402,7 +433,7 @@
 }
 
 .testimonial-card p:last-child {
-  color: var(--text-muted);
+  color: var(--accent-cyan);
   font-size: 0.86rem;
   line-height: 1.42;
   font-weight: var(--weight-regular);

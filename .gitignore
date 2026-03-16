@@ -27,6 +27,7 @@ package.json
 claude.md
 settings.local.json
 .playwright-mcp
+test-results/
 
 
 # Env and secrets

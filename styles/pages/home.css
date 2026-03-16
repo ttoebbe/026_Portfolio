@@ -267,6 +267,12 @@
     grid-template-columns: 1fr;
   }
 
+  .testimonial-card {
+    min-height: auto;
+    border: 1px solid var(--accent-cyan);
+    padding: var(--space-2) var(--space-3);
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -466,8 +472,7 @@
   }
 
   .contact-header-arrow {
-    width: 44px;
-    transform: translateY(-4px);
+    display: none;
   }
 
   .contact-detail {
@@ -503,8 +508,19 @@
     grid-template-columns: 1fr;
   }
 
+  .testimonials-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .testimonials-arrow {
+    display: none;
+  }
+
   .testimonial-card {
     min-height: auto;
+    border: 1px solid var(--accent-cyan);
+    padding: var(--space-2) var(--space-3);
   }
 
   .footer-links {
