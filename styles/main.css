@@ -567,7 +567,7 @@ h3 {
 /* Why arrow 2 position */
 .why-arrow-2 {
   top: 398px;
-  left: 790px;
+  left: 810px;
   width: 30px;
 }
 
@@ -1586,6 +1586,12 @@ textarea:focus-visible {
 
   .nav-right {
     gap: var(--space-3);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-actions {
+    justify-content: center;
   }
 }
 
