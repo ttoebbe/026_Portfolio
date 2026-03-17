@@ -287,6 +287,10 @@
     text-align: center;
   }
 
+  .home-footer .footer-branding {
+    align-items: center;
+  }
+
   @media (max-width: 768px) {
     .home-footer .footer-content {
       grid-template-rows: auto auto auto;
@@ -313,6 +317,12 @@
 
   .footer-legal {
     justify-self: center;
+    text-align: center;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
   }
 
