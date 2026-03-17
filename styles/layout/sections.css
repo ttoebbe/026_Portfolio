@@ -423,28 +423,30 @@
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  grid-template-rows: auto auto 1fr;
+  column-gap: var(--space-4);
+  row-gap: 0.4rem;
 }
 
 .testimonial-card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
   border: none;
   background: transparent;
   padding: var(--space-3) var(--space-4);
-  min-height: 220px;
 }
 
 .testimonial-card h3 {
   color: var(--accent-orange);
   font-size: var(--text-body-lg);
   font-weight: var(--weight-semi);
-  margin-bottom: 0.2rem;
 }
 
 .testimonial-card .role {
   color: var(--accent-cyan);
   font-size: var(--text-body-min);
   font-weight: var(--weight-semi);
-  margin-bottom: var(--space-2);
 }
 
 .testimonial-card p:last-child {
