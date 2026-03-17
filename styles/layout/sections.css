@@ -201,7 +201,6 @@
   user-select: none;
 }
 
-/* WHY ME DESKTOP POSITIONS */
 .why-image-pos {
   position: absolute;
   top: 74px;
@@ -311,7 +310,6 @@
   hyphens: auto;
 }
 
-/* Mobile Skills CTA - hidden by default, shown on mobile */
 .mobile-skills-cta {
   display: none;
 }

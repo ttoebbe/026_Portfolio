@@ -21,21 +21,20 @@
    MEDIA QUERIES - RESPONSIVE FIX FOR HORIZONTAL SCROLL
    ========================================================================== */
 @media (max-width: 1125px) and (min-width: 1101px) {
-  /* Fix horizontal overflow in 1100-1125px range by adjusting left positions */
   .why-item-3 {
-    left: 700px; /* reduced from 730px */
+    left: 700px;
   }
   
   .why-cta {
-    left: 760px; /* reduced from 790px */
+    left: 760px;
   }
   
   .why-arrow-2 {
-    left: 780px; /* reduced from 810px */  
+    left: 780px;  
   }
   
   .why-arrow-3 {
-    left: 870px; /* reduced from 900px */
+    left: 870px;
   }
 }
 
@@ -43,7 +42,6 @@
    MEDIA QUERIES - TABLET + MOBILE LAYOUT CHANGES
    ========================================================================== */
 @media (max-width: 1100px) {
-  /* WHY ME TABLET POSITIONS (image hidden) */
   .why-image-pos {
     display: none;
   }
@@ -210,10 +208,9 @@
     justify-content: flex-end;
   }
 
-  /* Contact Details Mobile: nach unten verschieben ab 768px */
   @media (max-width: 768px) {
     .contact-layout {
-      margin-bottom: 8rem; /* Platz für verschobene Details */
+      margin-bottom: 8rem;
     }
     
     .contact-details {
@@ -235,7 +232,6 @@
       justify-content: center;
     }
     
-    /* Labels "E-mail:" und "Tel:" verstecken */
     .contact-detail strong {
       display: none;
     }
@@ -279,7 +275,6 @@
     text-align: center;
   }
 
-  /* Footer Mobile: Social Icons über Logo ab 768px */
   @media (max-width: 768px) {
     .home-footer .footer-content {
       grid-template-rows: auto auto auto;
@@ -318,12 +313,10 @@
    MEDIA QUERIES - MOBILE LAYOUT (WHY SECTION)
    ========================================================================== */
 @media (max-width: 820px) {
-  /* WHY ME MOBILE – flex-flow layout (no fixed top-values) */
   .why-layout {
     min-height: unset;
   }
 
-  /* Hide image & decorative arrows on mobile */
   .why-image-pos {
     display: none;
   }
@@ -334,7 +327,6 @@
     display: none;
   }
 
-  /* Switch why-content to vertical flex */
   .why-content {
     position: static;
     display: flex;
@@ -345,7 +337,6 @@
     padding-block: var(--space-5);
   }
 
-  /* Reset absolute positioning for all children */
   .why-title,
   .why-lead,
   .why-i-am,
@@ -380,7 +371,6 @@
     transform: translateX(-60px);
   }
 
-  /* List becomes a normal block flow */
   .why-list {
     display: flex;
     flex-direction: column;
@@ -389,7 +379,6 @@
     width: 100%;
   }
 
-  /* Items: static, centered */
   .why-item {
     position: static;
     transform: none;
@@ -487,12 +476,10 @@
     gap: 1.8rem 0.95rem;
   }
 
-  /* Hide skill texts on mobile except Challenge me */
   .skill-card h3:not(.challenge-text) {
     display: none;
   }
 
-  /* Mobile Skills CTA */
   .mobile-skills-cta {
     display: flex;
     flex-direction: column;

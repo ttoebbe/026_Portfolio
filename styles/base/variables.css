@@ -3,7 +3,6 @@
  * Contains all global design tokens used throughout the portfolio
  */
 :root {
-  /* Color palette */
   --bg-main: #0b042d;
   --bg-main-alt: #1f0b80;
   --bg-main-end: #241085;
@@ -15,7 +14,6 @@
   --accent-cyan: #02f4bf;
   --accent-orange: #e15544;
 
-  /* Typography */
   --font-primary: "Roboto Mono", monospace;
   --font-code: "Roboto Mono", monospace;
   --weight-light: 300;
@@ -24,11 +22,9 @@
   --weight-semi: 600;
   --weight-bold: 700;
 
-  /* Border radius */
   --radius-sm: 4px;
   --radius-md: 10px;
 
-  /* Spacing scale */
   --space-1: 0.35rem;
   --space-2: 0.6rem;
   --space-3: 0.95rem;
@@ -37,7 +33,6 @@
   --space-6: 2.9rem;
   --space-7: 4.2rem;
 
-  /* Layout dimensions */
   --container: 1110px;
   --header-h: 82px;
   --marquee-h: 44px;

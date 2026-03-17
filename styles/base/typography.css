@@ -36,7 +36,6 @@ h3 {
   font-weight: var(--weight-semi);
 }
 
-/* Focus styles for all interactive elements */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,

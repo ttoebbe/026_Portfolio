@@ -7,29 +7,29 @@
  * Base Layer
  * Contains foundational styles, resets, and global variables
  */
-@import "./base/variables.css";  /* CSS custom properties and design tokens */
-@import "./base/reset.css";      /* Global resets, box-sizing, and accessibility utilities */
-@import "./base/typography.css"; /* Font definitions, heading styles, and focus states */
+@import "./base/variables.css";
+@import "./base/reset.css";
+@import "./base/typography.css";
 
 /**
  * Components Layer 
  * Contains reusable UI components with specific functionality
  */
-@import "./components/buttons.css";    /* Button styles and variants (primary, secondary, contact) */
-@import "./components/forms.css";      /* Form elements, inputs, validation states, and consent UI */
-@import "./components/navigation.css"; /* Header, nav menu, language switch, and mobile menu */
-@import "./components/footer.css";     /* Footer layouts for different page types */
+@import "./components/buttons.css";
+@import "./components/forms.css";
+@import "./components/navigation.css";
+@import "./components/footer.css";
 
 /**
  * Layout Layer
  * Contains structural layouts and grid systems
  */
-@import "./layout/grid.css";     /* Container, sections, and layout utilities */
-@import "./layout/header.css";   /* Header-specific layout structures */
-@import "./layout/sections.css"; /* Main content sections (hero, skills, projects, etc.) */
+@import "./layout/grid.css";
+@import "./layout/header.css";
+@import "./layout/sections.css";
 
 /**
  * Pages Layer
  * Contains page-specific styles and responsive behavior
  */
-@import "./pages/home.css";      /* Home page responsive styles, media queries, and legal pages */
+@import "./pages/home.css";

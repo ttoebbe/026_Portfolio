@@ -17,12 +17,10 @@
   padding-block: var(--space-7);
 }
 
-/* Utility classes */
 .full {
   width: 100%;
 }
 
-/* Reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(18px);

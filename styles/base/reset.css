@@ -34,7 +34,6 @@ img {
   height: auto;
 }
 
-/* Accessibility utilities */
 .sr-only {
   position: absolute;
   width: 1px;
