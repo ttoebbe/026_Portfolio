@@ -78,3 +78,8 @@
   transform: none;
   box-shadow: none;
 }
+
+.btn-contact.valid {
+  color: var(--accent-orange);
+  border-color: var(--accent-cyan);
+}

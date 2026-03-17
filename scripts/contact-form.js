@@ -183,7 +183,14 @@ function toggleConsentError(field, errorKey) {
  * Enables submit button only when form data is valid.
  */
 function updateSubmitState(form, submitButton) {
-  submitButton.disabled = !isFormValid(new FormData(form));
+  const formIsValid = isFormValid(new FormData(form));
+  submitButton.disabled = !formIsValid;
+  
+  if (formIsValid) {
+    submitButton.classList.add('valid');
+  } else {
+    submitButton.classList.remove('valid');
+  }
 }
 
 /**
