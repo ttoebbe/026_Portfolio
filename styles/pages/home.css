@@ -64,49 +64,49 @@
   }
 
   .why-lead {
-    top: 82px;
+    top: 74px;
     left: calc((100vw - 800px) / 2 + 30px);
     width: min(540px, calc(100% - ((100vw - 800px) / 2 + 120px)));
   }
 
   .why-i-am {
-    top: 202px;
+    top: 220px;
     left: calc((100vw - 800px) / 2 + 32px);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
 
   .why-item-1 {
-    top: 184px;
+    top: 204px;
     left: calc((100vw - 800px) / 2 + 260px);
   }
 
   .why-item-2 {
-    top: 380px;
-    left: calc((100vw - 800px) / 2 + 120px);
+    top: 410px;
+    left: calc((100vw - 800px) / 2 + 30px);
   }
 
   .why-item-3 {
-    top: 304px;
-    left: calc((100vw - 800px) / 2 + 370px);
+    top: 364px;
+    left: calc((100vw - 800px) / 2 + 350px);
   }
 
   .why-cta {
-    top: 490px;
+    top: 570px;
     left: calc((100vw - 800px) / 2 + 430px);
   }
 
   .why-arrow-1 {
-    top: 280px;
-    left: calc((100vw - 800px) / 2 + 230px);
+    top: 300px;
+    left: calc((100vw - 800px) / 2 + 220px);
   }
 
   .why-arrow-2 {
-    top: 398px;
-    left: calc((100vw - 800px) / 2 + 455px);
+    top: 490px;
+    left: calc((100vw - 800px) / 2 + 395px);
   }
 
   .why-arrow-3 {
-    top: 400px;
+    top: 490px;
     left: calc((100vw - 800px) / 2 + 540px);
   }
 }
