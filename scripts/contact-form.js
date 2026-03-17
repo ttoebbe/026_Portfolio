@@ -12,7 +12,9 @@ import {
   hasNoValidationErrors, 
   isFormValid, 
   getFirstErrorKey, 
-  resetValidationState, 
+  resetValidationState,
+  getSpecificFieldError,
+  getFirstSpecificError,
   FIELD_ORDER, 
   TEXT_FIELD_IDS 
 } from "./contact-validation.js";
@@ -180,11 +182,10 @@ function toggleConsentError(field, errorKey) {
 }
 
 /**
- * Enables submit button only when form data is valid.
+ * Updates submit button visual state based on form validity.
  */
 function updateSubmitState(form, submitButton) {
   const formIsValid = isFormValid(new FormData(form));
-  submitButton.disabled = !formIsValid;
   
   if (formIsValid) {
     submitButton.classList.add('valid');
@@ -206,24 +207,27 @@ function renderValidationStatus(statusElement, validationState) {
  */
 async function onContactSubmit(event, form, submitButton, statusElement, validationState) {
   event.preventDefault();
-  const payload = buildPayload(new FormData(form));
-  const endpoint = getEndpoint();
-  if (!validateAllFields(form, validationState, statusElement)) {
+  
+  const formData = new FormData(form);
+  
+  if (!isFormValid(formData)) {
+    const specificError = getFirstSpecificError(formData);
+    setStatus(statusElement, getTranslation(specificError), "error");
     return;
   }
+
+  const payload = buildPayload(formData);
+  const endpoint = getEndpoint();
   if (!validateEndpoint(endpoint)) {
     setStatus(statusElement, getTranslation("form.status.endpoint"), "error");
     return;
   }
   
-  // Set loading state
   submitButton.disabled = true;
   setStatus(statusElement, getTranslation("form.status.sending"));
   
-  // Execute API call
   const result = await submitContact(form, submitButton, statusElement, endpoint, payload, validationState);
   
-  // Handle result
   if (result.success) {
     onSubmitSuccess(form, statusElement, result.result, validationState);
   } else {

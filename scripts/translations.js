@@ -95,6 +95,10 @@ window.PORTFOLIO_TRANSLATIONS = {
 
     "form.status.required":
       "Bitte füllen Sie alle Pflichtfelder aus und akzeptieren die Datenschutzerklärung.",
+    "form.status.name.required": "Bitte geben Sie Ihren Namen ein.",
+    "form.status.email.required": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+    "form.status.message.required": "Bitte geben Sie Ihre Nachricht ein.",
+    "form.status.privacy.required": "Bitte akzeptieren Sie die Datenschutzerklärung.",
     "form.status.invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "form.status.endpoint": "Bitte konfigurieren Sie zuerst den Formular-Endpoint.",
     "form.status.sending": "Nachricht wird gesendet...",
@@ -223,6 +227,10 @@ window.PORTFOLIO_TRANSLATIONS = {
     "form.submit": "Send",
 
     "form.status.required": "Please fill in all required fields and accept the privacy policy.",
+    "form.status.name.required": "Please enter your name.",
+    "form.status.email.required": "Please enter your email address.",
+    "form.status.message.required": "Please enter your message.",
+    "form.status.privacy.required": "Please accept the privacy policy.",
     "form.status.invalidEmail": "Please enter a valid email address.",
     "form.status.endpoint": "Please configure the form endpoint first.",
     "form.status.sending": "Sending message...",

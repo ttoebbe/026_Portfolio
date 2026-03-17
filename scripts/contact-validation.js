@@ -68,6 +68,43 @@ export function getFirstErrorKey(validationState) {
 }
 
 /**
+ * Returns specific error key for each field.
+ */
+export function getSpecificFieldError(fieldId, formData) {
+  const value = getFieldValue(formData, fieldId);
+  
+  if (fieldId === "privacy-accepted") {
+    return value ? null : "form.status.privacy.required";
+  }
+  
+  if (!value) {
+    switch (fieldId) {
+      case "name": return "form.status.name.required";
+      case "email": return "form.status.email.required"; 
+      case "message": return "form.status.message.required";
+      default: return "form.status.required";
+    }
+  }
+  
+  if (fieldId === "email" && !hasValidEmail(value)) {
+    return "form.status.invalidEmail";
+  }
+  
+  return null;
+}
+
+/**
+ * Returns first specific error for invalid form.
+ */
+export function getFirstSpecificError(formData) {
+  for (const fieldId of FIELD_ORDER) {
+    const error = getSpecificFieldError(fieldId, formData);
+    if (error) return error;
+  }
+  return null;
+}
+
+/**
  * Resets validation state object.
  */
 export function resetValidationState(validationState) {
