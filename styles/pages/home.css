@@ -46,56 +46,68 @@
     display: none;
   }
 
+  .why-layout::before {
+    content: "";
+    display: block;
+    width: calc((100vw - 800px) / 2);
+    min-width: 20px;
+    max-width: 185px;
+    height: 370px;
+    position: absolute;
+    top: 74px;
+    left: 0;
+  }
+
   .why-title {
     top: 10px;
-    left: 370px;
+    left: calc(50% - 200px);
   }
 
   .why-lead {
     top: 82px;
-    left: 30px;
-    width: min(540px, calc(100% - 120px));
+    left: calc((100vw - 800px) / 2 + 30px);
+    width: min(540px, calc(100% - ((100vw - 800px) / 2 + 120px)));
   }
 
   .why-i-am {
     top: 202px;
-    left: 32px;
+    left: calc((100vw - 800px) / 2 + 32px);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
 
   .why-item-1 {
     top: 184px;
-    left: 260px;
+    left: calc((100vw - 800px) / 2 + 260px);
   }
 
   .why-item-2 {
     top: 380px;
-    left: 120px;
+    left: calc((100vw - 800px) / 2 + 120px);
   }
 
   .why-item-3 {
     top: 304px;
-    left: 370px;
+    left: calc((100vw - 800px) / 2 + 370px);
   }
 
   .why-cta {
     top: 490px;
-    left: 430px;
+    left: calc((100vw - 800px) / 2 + 430px);
   }
 
   .why-arrow-1 {
     top: 280px;
-    left: 230px;
+    left: calc((100vw - 800px) / 2 + 230px);
   }
 
   .why-arrow-2 {
     top: 398px;
-    left: 430px;
+    left: calc((100vw - 800px) / 2 + 430px);
   }
 
   .why-arrow-3 {
     top: 400px;
-    left: 540px;
+    left: calc((100vw - 800px) / 2 + 540px);
   }
 }
 
