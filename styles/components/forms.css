@@ -30,9 +30,9 @@
   border-radius: 0;
   background: transparent;
   color: var(--accent-cyan);
-  padding: 0.56rem 0.68rem;
-  font-size: 0.8rem;
-  line-height: 1.2;
+  padding: 0.68rem 0.78rem;
+  font-size: var(--text-body-min);
+  line-height: 1.35;
   font-weight: var(--weight-regular);
   font-family: inherit;
 }
@@ -78,8 +78,8 @@
 
 .consent-checkbox {
   appearance: none;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border: 1px solid var(--accent-orange);
   background: transparent;
   flex: 0 0 auto;
@@ -104,8 +104,8 @@
 
 .consent-text {
   color: var(--accent-cyan);
-  font-size: 0.8rem;
-  line-height: 1.2;
+  font-size: var(--text-body-min);
+  line-height: 1.35;
   font-weight: var(--weight-regular);
 }
 
@@ -120,8 +120,8 @@
 
 .form-status {
   grid-column: 1 / -1;
-  min-height: 1rem;
-  font-size: 0.8rem;
+  min-height: 1.35rem;
+  font-size: var(--text-body-min);
   font-weight: var(--weight-regular);
 }
 

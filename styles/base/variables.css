@@ -22,6 +22,13 @@
   --weight-semi: 600;
   --weight-bold: 700;
 
+  --text-body-min: 1rem;
+  --text-body-sm: 1.06rem;
+  --text-body-md: 1.12rem;
+  --text-body-lg: 1.2rem;
+  --text-title-sm: 1.36rem;
+  --text-title-md: 1.52rem;
+
   --radius-sm: 4px;
   --radius-md: 10px;
 

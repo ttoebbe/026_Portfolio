@@ -26,7 +26,7 @@
 
 .logo-mark {
   color: var(--accent-orange);
-  font-size: 1.28rem;
+  font-size: var(--text-title-sm);
   letter-spacing: 0.04em;
   font-weight: var(--weight-bold);
 }
@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  font-size: 1rem;
+  font-size: var(--text-body-md);
   font-weight: var(--weight-medium);
   line-height: 1.35;
 }
@@ -99,7 +99,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.36rem;
-  font-size: 1rem;
+  font-size: var(--text-body-md);
   font-weight: var(--weight-medium);
   line-height: 1.35;
   color: var(--accent-orange);
@@ -170,7 +170,7 @@
   flex-shrink: 0;
   color: var(--accent-cyan);
   letter-spacing: 0.05em;
-  font-size: 1rem;
+  font-size: var(--text-body-md);
   line-height: 1.35;
   padding-inline: 1.4rem;
 }

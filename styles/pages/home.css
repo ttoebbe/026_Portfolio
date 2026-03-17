@@ -149,7 +149,7 @@
   .main-nav {
     display: grid;
     gap: 0.8rem;
-    font-size: 1.02rem;
+    font-size: var(--text-body-md);
     justify-items: start;
   }
 
@@ -161,7 +161,7 @@
 
   .lang-switch {
     justify-self: start;
-    font-size: 1rem;
+    font-size: var(--text-body-md);
   }
 
   .hero {
@@ -240,7 +240,7 @@
       flex-direction: column;
       align-items: center;
       gap: 0.25rem;
-      font-size: 0.78rem;
+      font-size: var(--text-body-min);
       justify-content: center;
     }
     
@@ -426,11 +426,11 @@
   }
 
   .why-item h3 {
-    font-size: 0.88rem;
+    font-size: var(--text-body-sm);
   }
 
   .why-item p {
-    font-size: 0.84rem;
+    font-size: var(--text-body-min);
   }
 
   .skill-card:last-child::after {
@@ -456,7 +456,7 @@
   }
 
   .project-marquee-text {
-    font-size: 1rem;
+    font-size: var(--text-body-md);
     padding-inline: 1rem;
   }
 
@@ -478,11 +478,11 @@
   }
 
   .contact-detail {
-    font-size: 0.78rem;
+    font-size: var(--text-body-min);
   }
 
   .consent-text {
-    font-size: 0.8rem;
+    font-size: var(--text-body-min);
   }
 
   .scroll-icon {
@@ -518,7 +518,7 @@
 
   .mobile-skills-text {
     color: var(--accent-cyan);
-    font-size: 1rem;
+    font-size: var(--text-body-md);
     line-height: 1.45;
     max-width: 280px;
     margin: 0;
@@ -587,7 +587,7 @@
 .legal-section {
   max-width: 840px;
   color: var(--text-muted);
-  font-size: 0.94rem;
+  font-size: var(--text-body-md);
   line-height: 1.62;
   font-weight: var(--weight-regular);
 }
@@ -595,14 +595,14 @@
 .legal-section h2 {
   color: var(--accent-orange);
   margin: 1.9rem 0 0.8rem;
-  font-size: 1.24rem;
+  font-size: var(--text-title-sm);
   font-weight: var(--weight-semi);
 }
 
 .legal-section h3 {
   color: var(--text-primary);
   margin: 1.1rem 0 0.4rem;
-  font-size: 1.02rem;
+  font-size: var(--text-body-md);
   font-weight: var(--weight-semi);
 }
 

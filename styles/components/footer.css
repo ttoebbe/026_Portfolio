@@ -23,13 +23,13 @@
 .footer-logo {
   font-family: var(--font-code);
   color: var(--accent-orange);
-  font-size: 1.36rem;
+  font-size: var(--text-title-md);
   font-weight: var(--weight-bold);
 }
 
 .footer-tagline {
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: var(--text-body-min);
   font-weight: var(--weight-regular);
 }
 
@@ -55,7 +55,7 @@
 .footer-legal {
   justify-self: end;
   text-align: right;
-  font-size: 0.8rem;
+  font-size: var(--text-body-min);
   font-weight: var(--weight-regular);
   color: var(--text-muted);
 }
@@ -94,7 +94,7 @@
 
 .home-footer .footer-tagline {
   color: var(--accent-orange);
-  font-size: 0.56rem;
+  font-size: var(--text-body-min);
   letter-spacing: 0.02em;
   text-transform: lowercase;
 }
@@ -116,7 +116,7 @@
 }
 
 .home-footer .footer-links a {
-  font-size: 0.58rem;
+  font-size: var(--text-body-min);
 }
 
 .home-footer .footer-social {
@@ -148,13 +148,13 @@
 .nav-brand {
   color: var(--accent-orange);
   font-family: var(--font-code);
-  font-size: 1.24rem;
+  font-size: var(--text-title-sm);
   font-weight: var(--weight-bold);
 }
 
 .back-link {
   color: var(--text-muted);
-  font-size: 0.86rem;
+  font-size: var(--text-body-sm);
   font-family: var(--font-code);
   font-weight: var(--weight-medium);
 }
