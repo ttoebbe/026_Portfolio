@@ -21,20 +21,56 @@
    MEDIA QUERIES - RESPONSIVE FIX FOR HORIZONTAL SCROLL
    ========================================================================== */
 @media (max-width: 1125px) and (min-width: 1101px) {
+  .why-title {
+    top: 10px;
+    left: 400px;
+  }
+
+  .why-lead {
+    top: 74px;
+    left: 400px;
+    width: min(540px, calc(100% - ((100vw - 800px) / 2 + 120px)));
+  }
+
+  .why-i-am {
+    top: 220px;
+    left: 400px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .why-item-1 {
+    top: 204px;
+    left: 640px;
+  }
+
+  .why-item-2 {
+    top: 420px;
+    left: 400px;
+  }
+
   .why-item-3 {
-    left: 700px;
+    top: 364px;
+    left: 720px;
   }
-  
+
   .why-cta {
-    left: 760px;
+    top: 570px;
+    left: 1230px;
   }
-  
+
+  .why-arrow-1 {
+    top: 300px;
+    left: 590px;
+  }
+
   .why-arrow-2 {
-    left: 780px;  
+    top: 490px;
+    left: 770px;
   }
-  
+
   .why-arrow-3 {
-    left: 870px;
+    top: 490px;
+    left: 1340;
   }
 }
 

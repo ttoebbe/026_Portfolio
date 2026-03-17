@@ -223,46 +223,44 @@
 }
 
 .why-i-am {
-  top: 202px;
-  left: 392px;
+  top: 220px;
+  left: 400px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 .why-item-1 {
-  top: 184px;
+  top: 212px;
   left: 620px;
 }
 
 .why-item-2 {
-  top: 380px;
-  left: 480px;
+  top: 400px;
+  left: 400px;
 }
 
 .why-item-3 {
-  top: 304px;
+  top: 354px;
   left: 730px;
 }
 
 .why-cta {
-  top: 490px;
-  left: 790px;
+  top: 570px;
+  left: 800px;
 }
 
 .why-arrow-1 {
-  top: 280px;
+  top: 300px;
   left: 590px;
-  width: 34px;
 }
 
 .why-arrow-2 {
-  top: 398px;
-  left: 810px;
-  width: 30px;
+  top: 490px;
+  left: 770px;
 }
 
 .why-arrow-3 {
-  top: 400px;
+  top: 490px;
   left: 900px;
-  width: 44px;
 }
 
 /* ==========================================================================
