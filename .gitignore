@@ -28,6 +28,9 @@ claude.md
 settings.local.json
 .playwright-mcp
 test-results/
+tests/
+playwright-report/
+playwright.config.js
 
 
 # Env and secrets

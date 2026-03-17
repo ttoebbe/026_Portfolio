@@ -305,6 +305,15 @@
   font-size: 1rem;
   font-weight: var(--weight-semi);
   line-height: 1.35;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Mobile Skills CTA - hidden by default, shown on mobile */
+.mobile-skills-cta {
+  display: none;
 }
 
 /* ==========================================================================

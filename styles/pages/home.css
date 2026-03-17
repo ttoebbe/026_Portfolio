@@ -425,15 +425,6 @@
   .skill-card:last-child::after {
     display: none;
   }
-
-  .skills::after {
-    content: "";
-    display: block;
-    width: 26px;
-    height: 45px;
-    background: url("../../assets/img/icons/sectionWhyMe/arrowDown.svg") center/contain no-repeat;
-    margin: var(--space-4) auto 0;
-  }
 }
 
 /* ==========================================================================
@@ -494,6 +485,34 @@
   .skills-grid {
     grid-template-columns: repeat(3, minmax(76px, 1fr));
     gap: 1.8rem 0.95rem;
+  }
+
+  /* Hide skill texts on mobile except Challenge me */
+  .skill-card h3:not(.challenge-text) {
+    display: none;
+  }
+
+  /* Mobile Skills CTA */
+  .mobile-skills-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .mobile-arrow {
+    width: 32px;
+    height: auto;
+  }
+
+  .mobile-skills-text {
+    color: var(--accent-cyan);
+    font-size: 1rem;
+    line-height: 1.45;
+    max-width: 280px;
+    margin: 0;
   }
 
   .project-actions {

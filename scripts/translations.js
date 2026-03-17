@@ -46,6 +46,7 @@ window.PORTFOLIO_TRANSLATIONS = {
     "skills.scrum": "Scrum",
     "skills.codesys": "CODESYS",
     "skills.challenge": "Neue Herausforderungen",
+    "skills.mobile.text": "Ich bin immer bereit, neue Technologien zu lernen, sagen Sie mir einfach, was Sie brauchen.",
 
     "projects.title": "Meine Projekte",
     "projects.join.imageAlt": "Screenshot des Join-Projekts",
@@ -173,7 +174,8 @@ window.PORTFOLIO_TRANSLATIONS = {
     "skills.git": "Git",
     "skills.scrum": "Scrum",
     "skills.codesys": "CODESYS",
-    "skills.challenge": "New Challenges",
+    "skills.challenge": "Challenge me",
+    "skills.mobile.text": "I am always happy to learn new technologies, just tell me what you need.",
 
     "projects.title": "My Projects",
     "projects.join.imageAlt": "Screenshot of Join project",
