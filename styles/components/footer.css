@@ -162,3 +162,29 @@
 .back-link:hover {
   color: var(--accent-cyan);
 }
+
+.back-to-top-floating {
+  position: fixed;
+  right: 0.8rem;
+  bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  z-index: 120;
+}
+
+.back-to-top-floating img {
+  width: 14px;
+  height: 32px;
+}
+
+.back-to-top-floating:hover {
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent-orange) 35%, transparent));
+}
+
+.back-to-top-floating:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--accent-cyan) 75%, transparent);
+  outline-offset: 2px;
+}

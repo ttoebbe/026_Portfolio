@@ -149,10 +149,26 @@ function getScrollTarget(hash) {
  */
 function onSmoothScroll(event, target, hash, header) {
   event.preventDefault();
-  const top = getScrollTop(target, header);
   const behavior = prefersReducedMotion ? "auto" : "smooth";
-  window.scrollTo({ top, behavior });
+  if (hash === "#top") {
+    scrollToAbsoluteTop(behavior);
+  } else {
+    const top = getScrollTop(target, header);
+    window.scrollTo({ top, behavior });
+  }
   history.replaceState(null, "", hash);
+}
+
+/**
+ * Scrolls to the absolute document start.
+ */
+function scrollToAbsoluteTop(behavior) {
+  window.scrollTo({ top: 0, behavior });
+  if (behavior === "smooth") {
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 450);
+  }
 }
 
 /**
@@ -160,7 +176,8 @@ function onSmoothScroll(event, target, hash, header) {
  */
 function getScrollTop(target, header) {
   const headerOffset = header ? header.offsetHeight + 12 : 0;
-  return target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  return Math.max(0, targetTop);
 }
 
 /**
