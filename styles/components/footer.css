@@ -137,7 +137,7 @@
   outline-offset: 2px;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 950px) {
   .footer-content {
     grid-template-columns: 1fr;
     justify-items: center;
