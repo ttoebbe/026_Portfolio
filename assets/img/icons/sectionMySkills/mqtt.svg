@@ -1,0 +1,12 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#00f5d4">
+    <!-- Signal source dot -->
+    <circle cx="50" cy="88" r="7"/>
+    <!-- Arc 1 (inner, r=18/12, center at 50,88) -->
+    <path d="M37,75 A18,18,0,0,1,63,75 L58,80 A12,12,0,0,0,42,80 Z"/>
+    <!-- Arc 2 (middle, r=33/27) -->
+    <path d="M27,65 A33,33,0,0,1,73,65 L69,69 A27,27,0,0,0,31,69 Z"/>
+    <!-- Arc 3 (outer, r=48/42) -->
+    <path d="M16,54 A48,48,0,0,1,84,54 L80,58 A42,42,0,0,0,20,58 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#00f5d4">
+    <!-- DIN rail (top mount) -->
+    <rect x="5" y="17" width="90" height="7" rx="2"/>
+    <!-- Chassis with 3 module slots (evenodd creates the slot cutouts) -->
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M8,24 H92 V72 H8 Z
+         M12,28 H34 V68 H12 Z
+         M39,28 H61 V68 H39 Z
+         M66,28 H88 V68 H66 Z"/>
+    <!-- Connector pins: module 1 -->
+    <rect x="15" y="72" width="3.5" height="11" rx="1"/>
+    <rect x="21" y="72" width="3.5" height="11" rx="1"/>
+    <rect x="27" y="72" width="3.5" height="11" rx="1"/>
+    <!-- Connector pins: module 2 -->
+    <rect x="42" y="72" width="3.5" height="11" rx="1"/>
+    <rect x="48" y="72" width="3.5" height="11" rx="1"/>
+    <rect x="54" y="72" width="3.5" height="11" rx="1"/>
+    <!-- Connector pins: module 3 -->
+    <rect x="69" y="72" width="3.5" height="11" rx="1"/>
+    <rect x="75" y="72" width="3.5" height="11" rx="1"/>
+    <rect x="81" y="72" width="3.5" height="11" rx="1"/>
+  </g>
+</svg>
