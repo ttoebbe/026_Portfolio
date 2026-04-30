@@ -1,0 +1,48 @@
+name: Deploy via SFTP
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
+      - name: Deploy via SFTP
+        env:
+          SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            open sftp://$SFTP_USERNAME:$SFTP_PASSWORD@$SFTP_SERVER:$SFTP_PORT;
+            mirror -R \
+              --exclude-glob node_modules/ \
+              --exclude-glob tests/ \
+              --exclude-glob playwright-report/ \
+              --exclude-glob test-results/ \
+              --exclude-glob .claude/ \
+              --exclude-glob .github/ \
+              --exclude-glob .vscode/ \
+              --exclude-glob .helpdesk/ \
+              --exclude-glob .git/ \
+              --exclude package.json \
+              --exclude package-lock.json \
+              --exclude playwright.config.js \
+              --exclude AGENTS.md \
+              --exclude claude.md \
+              --exclude .gitignore \
+              --exclude .prettierrc.json \
+              ./ $SFTP_REMOTE_DIR
+          "

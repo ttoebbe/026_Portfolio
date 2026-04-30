@@ -16,7 +16,7 @@ pnpm-debug.log*
 # Editor and system files
 .vscode/
 .DS_Store
-.github/
+
 Thumbs.db
 AGENTS.md
 eslint.config.js
@@ -38,5 +38,8 @@ playwright.config.js
 
 # helpdesk files
 .helpdesk/
+
+# GitHub Copilot instructions (local only)
+.github/copilot-instructions.md
 
 
