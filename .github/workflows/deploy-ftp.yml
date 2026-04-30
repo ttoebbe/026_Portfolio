@@ -23,26 +23,4 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
         run: |
-          lftp -c "
-            set sftp:auto-confirm yes;
-            set net:max-retries 3;
-            open sftp://$SFTP_USERNAME:$SFTP_PASSWORD@$SFTP_SERVER:$SFTP_PORT;
-            mirror -R \
-              --exclude-glob node_modules/ \
-              --exclude-glob tests/ \
-              --exclude-glob playwright-report/ \
-              --exclude-glob test-results/ \
-              --exclude-glob .claude/ \
-              --exclude-glob .github/ \
-              --exclude-glob .vscode/ \
-              --exclude-glob .helpdesk/ \
-              --exclude-glob .git/ \
-              --exclude package.json \
-              --exclude package-lock.json \
-              --exclude playwright.config.js \
-              --exclude AGENTS.md \
-              --exclude claude.md \
-              --exclude .gitignore \
-              --exclude .prettierrc.json \
-              ./ $SFTP_REMOTE_DIR
-          "
+          lftp -c "set sftp:auto-confirm yes; set net:max-retries 3; open sftp://$SFTP_USERNAME:$SFTP_PASSWORD@$SFTP_SERVER:$SFTP_PORT; mirror -R --verbose --exclude-glob node_modules/ --exclude-glob tests/ --exclude-glob playwright-report/ --exclude-glob test-results/ --exclude-glob .claude/ --exclude-glob .github/ --exclude-glob .vscode/ --exclude-glob .helpdesk/ --exclude-glob .git/ --exclude package.json --exclude package-lock.json --exclude playwright.config.js --exclude AGENTS.md --exclude claude.md --exclude .gitignore --exclude .prettierrc.json ./ $SFTP_REMOTE_DIR"
